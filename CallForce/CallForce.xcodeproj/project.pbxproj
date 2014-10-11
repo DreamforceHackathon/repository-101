@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01F2D65519E9C2740069CE61 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65419E9C2740069CE61 /* LoginController.swift */; };
+		01F2D65719E9C2BD0069CE61 /* LoginController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F2D65619E9C2BD0069CE61 /* LoginController.storyboard */; };
+		01F2D65919E9C30C0069CE61 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65819E9C30C0069CE61 /* GradientView.swift */; };
 		1DD8163419E914C4001DECCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163319E914C4001DECCC /* main.m */; };
 		1DD8163719E914C4001DECCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163619E914C4001DECCC /* AppDelegate.m */; };
 		1DD8163A19E914C4001DECCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163919E914C4001DECCC /* ViewController.m */; };
@@ -22,7 +25,6 @@
 		1DD8167419E929E8001DECCC /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD8167119E929E8001DECCC /* libcrypto.a */; };
 		1DD8167519E929E8001DECCC /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD8167219E929E8001DECCC /* libssl.a */; };
 		1DD8167619E929E9001DECCC /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD8167319E929E8001DECCC /* libTwilioClient.a */; };
-		1DD8168519E9C893001DECCC /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8168319E9C893001DECCC /* ProductViewController.m */; };
 		72A1FEE8F4CC46EBB8F125C1 /* libPods-CallForce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B913CDA7B58489CAD14E83A /* libPods-CallForce.a */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01F2D65319E9C2740069CE61 /* CallForce-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallForce-Bridging-Header.h"; sourceTree = "<group>"; };
+		01F2D65419E9C2740069CE61 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		01F2D65619E9C2BD0069CE61 /* LoginController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginController.storyboard; sourceTree = "<group>"; };
+		01F2D65819E9C30C0069CE61 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1DD8162E19E914C4001DECCC /* CallForce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallForce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD8163219E914C4001DECCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DD8163319E914C4001DECCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,8 +71,8 @@
 		1DD8167A19E92A55001DECCC /* TCDeviceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TCDeviceDelegate.h; path = ../TwilioClient/Headers/TCDeviceDelegate.h; sourceTree = "<group>"; };
 		1DD8167B19E92A55001DECCC /* TCPresenceEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TCPresenceEvent.h; path = ../TwilioClient/Headers/TCPresenceEvent.h; sourceTree = "<group>"; };
 		1DD8167C19E92A55001DECCC /* TwilioClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TwilioClient.h; path = ../TwilioClient/Headers/TwilioClient.h; sourceTree = "<group>"; };
-		1DD8168019E9C87D001DECCC /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
-		1DD8168319E9C893001DECCC /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
+		1DD8167D19E93348001DECCC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = CallForce/SWRevealViewController.h; sourceTree = "<group>"; };
+		1DD8167E19E93348001DECCC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = CallForce/SWRevealViewController.m; sourceTree = "<group>"; };
 		8B913CDA7B58489CAD14E83A /* libPods-CallForce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CallForce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C16375DA3C44A8C9FE5C3F7 /* Pods-CallForce.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallForce.xcconfig"; path = "Pods/Pods-CallForce.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,18 +131,20 @@
 		1DD8163019E914C4001DECCC /* CallForce */ = {
 			isa = PBXGroup;
 			children = (
-				1DD8168319E9C893001DECCC /* ProductViewController.m */,
-				1DD8168019E9C87D001DECCC /* ProductViewController.h */,
 				1DD8165D19E91D6E001DECCC /* Phone.m */,
 				1DD8165A19E91D3E001DECCC /* Phone.h */,
+				01F2D65819E9C30C0069CE61 /* GradientView.swift */,
 				1DD8163519E914C4001DECCC /* AppDelegate.h */,
 				1DD8163619E914C4001DECCC /* AppDelegate.m */,
 				1DD8163819E914C4001DECCC /* ViewController.h */,
 				1DD8163919E914C4001DECCC /* ViewController.m */,
+				01F2D65419E9C2740069CE61 /* LoginController.swift */,
+				01F2D65619E9C2BD0069CE61 /* LoginController.storyboard */,
 				1DD8163B19E914C4001DECCC /* Main.storyboard */,
 				1DD8163E19E914C4001DECCC /* Images.xcassets */,
 				1DD8164019E914C4001DECCC /* LaunchScreen.xib */,
 				1DD8163119E914C4001DECCC /* Supporting Files */,
+				01F2D65319E9C2740069CE61 /* CallForce-Bridging-Header.h */,
 			);
 			path = CallForce;
 			sourceTree = "<group>";
@@ -170,6 +178,8 @@
 		1DD8166219E9268F001DECCC /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				1DD8167D19E93348001DECCC /* SWRevealViewController.h */,
+				1DD8167E19E93348001DECCC /* SWRevealViewController.m */,
 				1DD8167119E929E8001DECCC /* libcrypto.a */,
 				1DD8167719E92A55001DECCC /* TCConnection.h */,
 				1DD8167819E92A55001DECCC /* TCConnectionDelegate.h */,
@@ -275,6 +285,7 @@
 			files = (
 				1DD8163D19E914C4001DECCC /* Main.storyboard in Resources */,
 				1DD8164219E914C4001DECCC /* LaunchScreen.xib in Resources */,
+				01F2D65719E9C2BD0069CE61 /* LoginController.storyboard in Resources */,
 				1DD8163F19E914C4001DECCC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,9 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DD8168519E9C893001DECCC /* ProductViewController.m in Sources */,
 				1DD8165F19E91D6E001DECCC /* Phone.m in Sources */,
 				1DD8163A19E914C4001DECCC /* ViewController.m in Sources */,
+				01F2D65519E9C2740069CE61 /* LoginController.swift in Sources */,
+				01F2D65919E9C30C0069CE61 /* GradientView.swift in Sources */,
 				1DD8163719E914C4001DECCC /* AppDelegate.m in Sources */,
 				1DD8163419E914C4001DECCC /* main.m in Sources */,
 			);
@@ -455,6 +467,7 @@
 			baseConfigurationReference = 8C16375DA3C44A8C9FE5C3F7 /* Pods-CallForce.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -469,6 +482,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CallForce/CallForce-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -477,6 +492,7 @@
 			baseConfigurationReference = 8C16375DA3C44A8C9FE5C3F7 /* Pods-CallForce.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -491,6 +507,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CallForce/CallForce-Bridging-Header.h";
 			};
 			name = Release;
 		};
