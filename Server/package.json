@@ -7,7 +7,9 @@
     "test": "./node_modules/mocha/bin/mocha"
   },
   "dependencies": {
+    "body-parser": "1.9.0",
     "express": "4.x",
+    "lodash": "2.4.1",
     "twilio": "1.7.0"
   },
   "devDependencies": {
