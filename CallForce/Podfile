@@ -2,7 +2,11 @@
 # platform :ios, "6.0"
 
 target "CallForce" do
+
 pod "MDCSwipeToChoose"
+pod "AFNetworking", "~> 2.0"
+pod "SWRevealViewController"
+
 end
 
 target "CallForceTests" do

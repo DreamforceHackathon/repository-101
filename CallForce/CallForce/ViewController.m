@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <MDCSwipeToChoose/MDCSwipeToChoose.h>
+#import "Phone.h"
 
 @interface ViewController ()
 
@@ -39,6 +40,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MDCSwipeToChooseDelegate Callbacks
+
+// This is called then a user swipes the view fully left or right.
+- (void)view:(UIView *)view wasChosenWithDirection:(MDCSwipeDirection)direction {
+    if (direction == MDCSwipeDirectionLeft) {
+        NSLog(@"Photo deleted!");
+    } else {
+        NSLog(@"Photo saved!");
+    }
+    
+    Phone *phone = [[Phone alloc] init];
+    [phone connect:@"805-469-5940"];
+    
 }
 
 @end

@@ -8,7 +8,7 @@
 {
     if ( self = [super init] )
     {
-        NSURL* url = [NSURL URLWithString:@"http://companyfoo.com/auth.php"];
+        NSURL* url = [NSURL URLWithString:@"http://google.com"];
         NSURLResponse* response = nil;
         NSError* error = nil;
         NSData* data = [NSURLConnection sendSynchronousRequest:
@@ -24,6 +24,7 @@
                 NSString* capabilityToken =
                 [[NSString alloc] initWithData:data
                                        encoding:NSUTF8StringEncoding];
+                capabilityToken = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6InNjb3BlOmNsaWVudDppbmNvbWluZz9jbGllbnROYW1lPWNhbGxGb3JjZSBzY29wZTpjbGllbnQ6b3V0Z29pbmc_YXBwU2lkPUFQNTJmMWJjOTIyMDk0N2FhNTZmNmY1ZDQ0NDVlMmVjYjYmY2xpZW50TmFtZT1jYWxsRm9yY2UiLCJpc3MiOiJBQ2NmMmNhY2Y3ODU5NGE0NmM3MDYyNDk5N2JlZmViMjVhIiwiZXhwIjoxNDEzMDYwOTI4fQ.zKj1c_CrGv9PtTe1ikERd0ZKBycGPBU0b1J9CJ0BVvM";
                 
                 _device = [[TCDevice alloc] initWithCapabilityToken:capabilityToken
                                                            delegate:nil];
