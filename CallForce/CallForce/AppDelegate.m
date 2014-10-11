@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CallForce-Swift.h"
+#import "SWRevealViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,23 +21,18 @@
   
   UIStoryboard *sideMenuStoryboard = [UIStoryboard storyboardWithName:@"SideMenuController" bundle:nil];
   SideMenuController *sideMenuController = [sideMenuStoryboard instantiateInitialViewController];
-  self.window.rootViewController = sideMenuController;
+  
+  UIStoryboard *leadStoryboard = [UIStoryboard storyboardWithName:@"LeadController" bundle:nil];
+  UINavigationController *leadController = [leadStoryboard instantiateInitialViewController];
+  
+  SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:sideMenuController frontViewController:leadController];
+  
+  
+  self.window.rootViewController = revealController;
   [self.window makeKeyAndVisible];
   
-//
-//  let mainStoryboard = UIStoryboard(name: "HomeController", bundle: nil)
-//  let homeController = mainStoryboard.instantiateInitialViewController() as UINavigationController
-//  let sideMenuStoryboard = UIStoryboard(name: "SideMenuController", bundle: nil)
-//  let sideMenuController = sideMenuStoryboard.instantiateInitialViewController() as SideMenuController
-//  
-//  sideMenuController.homeController = homeController
-//  
-//  var revealController = SWRevealViewController(rearViewController: sideMenuController, frontViewController: homeController)
-//  //    revealController.rearViewRevealWidth = 215
-//  
-//  window?.rootViewController = revealController
-//  window?.makeKeyAndVisible()
-    return YES;
+
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

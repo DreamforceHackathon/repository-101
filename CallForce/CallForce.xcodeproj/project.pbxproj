@@ -13,6 +13,8 @@
 		01F2D65B19E9CDAD0069CE61 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65A19E9CDAD0069CE61 /* SideMenuController.swift */; };
 		01F2D65D19E9CDB70069CE61 /* SideMenuController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F2D65C19E9CDB70069CE61 /* SideMenuController.storyboard */; };
 		01F2D65F19E9DAAD0069CE61 /* NavigationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65E19E9DAAD0069CE61 /* NavigationTableViewCell.swift */; };
+		01F2D66119E9DE300069CE61 /* LeadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D66019E9DE300069CE61 /* LeadController.swift */; };
+		01F2D66319E9DE770069CE61 /* LeadController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F2D66219E9DE770069CE61 /* LeadController.storyboard */; };
 		1D080AB419E9CCAF006A45E3 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D080AB219E9CCAF006A45E3 /* ProductViewController.m */; };
 		1D080AB719E9CE52006A45E3 /* ProductViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */; };
 		1DD8163419E914C4001DECCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163319E914C4001DECCC /* main.m */; };
@@ -51,6 +53,8 @@
 		01F2D65A19E9CDAD0069CE61 /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		01F2D65C19E9CDB70069CE61 /* SideMenuController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenuController.storyboard; sourceTree = "<group>"; };
 		01F2D65E19E9DAAD0069CE61 /* NavigationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTableViewCell.swift; sourceTree = "<group>"; };
+		01F2D66019E9DE300069CE61 /* LeadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadController.swift; sourceTree = "<group>"; };
+		01F2D66219E9DE770069CE61 /* LeadController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeadController.storyboard; sourceTree = "<group>"; };
 		1D080AAF19E9CC9D006A45E3 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
 		1D080AB219E9CCAF006A45E3 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductViewController.storyboard; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				1DD8163519E914C4001DECCC /* AppDelegate.h */,
 				1DD8163619E914C4001DECCC /* AppDelegate.m */,
 				1DD8163819E914C4001DECCC /* ViewController.h */,
+				01F2D66019E9DE300069CE61 /* LeadController.swift */,
+				01F2D66219E9DE770069CE61 /* LeadController.storyboard */,
 				1DD8163919E914C4001DECCC /* ViewController.m */,
 				01F2D65419E9C2740069CE61 /* LoginController.swift */,
 				01F2D65A19E9CDAD0069CE61 /* SideMenuController.swift */,
@@ -305,6 +311,7 @@
 				01F2D65D19E9CDB70069CE61 /* SideMenuController.storyboard in Resources */,
 				1DD8164219E914C4001DECCC /* LaunchScreen.xib in Resources */,
 				01F2D65719E9C2BD0069CE61 /* LoginController.storyboard in Resources */,
+				01F2D66319E9DE770069CE61 /* LeadController.storyboard in Resources */,
 				1DD8163F19E914C4001DECCC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +368,7 @@
 				1DD8163A19E914C4001DECCC /* ViewController.m in Sources */,
 				01F2D65519E9C2740069CE61 /* LoginController.swift in Sources */,
 				01F2D65919E9C30C0069CE61 /* GradientView.swift in Sources */,
+				01F2D66119E9DE300069CE61 /* LeadController.swift in Sources */,
 				1DD8163719E914C4001DECCC /* AppDelegate.m in Sources */,
 				1DD8163419E914C4001DECCC /* main.m in Sources */,
 				1D080AB419E9CCAF006A45E3 /* ProductViewController.m in Sources */,
