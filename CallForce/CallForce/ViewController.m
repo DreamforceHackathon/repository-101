@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <MDCSwipeToChoose/MDCSwipeToChoose.h>
 
 @interface ViewController ()
 
@@ -17,6 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    // You can customize MDCSwipeToChooseView using MDCSwipeToChooseViewOptions.
+    MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
+    options.delegate = self;
+    options.likedText = @"Keep";
+    options.likedColor = [UIColor blueColor];
+    options.nopeText = @"Delete";
+    options.onPan = ^(MDCPanState *state){
+        if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft) {
+            NSLog(@"Let go now to delete the photo!");
+        }
+    };
+    
+    MDCSwipeToChooseView *view = [[MDCSwipeToChooseView alloc] initWithFrame:self.view.bounds
+                                                                     options:options];
+    view.imageView.image = [UIImage imageNamed:@"photo"];
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {
