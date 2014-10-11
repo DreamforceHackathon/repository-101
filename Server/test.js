@@ -18,5 +18,8 @@ describe('twilio', function () {
       .expect(200, {
         token: Joi.string()
       })
+      .flare(function (x) {
+        console.log('TWILIO TEMP APP TOKEN:', x.res.body.token);
+      })
   })
 })
