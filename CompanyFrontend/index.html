@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="callforce">
+<head>
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>CallForce</title>
+
+    <link rel="stylesheet" type="text/css" href="dist/styles.css">
+    <script src="dist/scripts.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="content">
+
+    <div ui-view="container">
+    </div>
+
+    <nav class="bar bar-tab"
+         ng-controller="TabCtrl">
+        <a class="tab-item"
+           ng-class="{'active': isPending}"
+           ng-click="clickPending()">
+            <span class="icon">
+                <i class="fa fa-users"></i>
+            </span>
+            <span class="tab-label">
+                Pending
+            </span>
+        </a>
+        <a class="tab-item"
+           ng-class="{'active': isActive}"
+           ng-click="clickActive()">
+            <span class="icon">
+                <i class="fa fa-line-chart"></i>
+            </span>
+            <span class="tab-label">
+                Active
+            </span>
+        </a>
+    </nav>
+
+</div>
+</body>
+</html>
