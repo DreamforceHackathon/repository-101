@@ -5,29 +5,20 @@
                 <div class="media-body">
                     {{ rep.name }}
                     <p>
-                        Applied {{ rep.pending_since }}
+                        Member since {{ rep.created_at }}
                     </p>
                 </div>
-        </li>
-        <li class="table-view-cell" style="padding: 11px 15px 11px 15px;">
-
-
-            <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco.
-                    </p>
         </li>
         <li class="table-view-cell table-view-divider"></li>
 
         <li>
             <div class="segmented-control" style="border:none;">
                 <span class="control-item " style="padding-top: 1em;">
-                    <h3>{{ rep.closing_ratio }}</h3>
+                    <h3>{{ rep.number_of_closes / rep.number_of_calls | number:2 }}</h3>
                     Closing rate
                 </span>
                 <span class="control-item">
-                    <h3>${{ rep.average_deal_size }}</h3>
+                    <h3>${{ rep.total_sales / rep.number_of_closes | number:2}}</h3>
                     Avg. deal size
                 </span>
                 <span class="control-item">
@@ -36,36 +27,74 @@
                 </span>
             </div>
         </li>
+        <li class="table-view-cell table-view-divider"></li>
+
+
+
+        <li class="table-view-cell" style="padding: 11px 15px 11px 15px;">
+
+
+            <p>
+                        {{ rep.summary }}
+                    </p>
+        </li>
+
+        <li class="table-view-cell" style="padding: 11px 15px 11px 15px;">
+
+
+            <p>
+                {{ rep.work_experience }}
+            </p>
+        </li>
+
+
 
         <li class="table-view-cell table-view-divider"></li>
 
-        <li>
-            <div class="segmented-control" style="border:none;">
+        <!--<li>-->
+            <!--<div class="segmented-control" style="border:none;">-->
 
-                <span class="control-item" style="padding-top: 1em;border-left: 0;">
-                    <h3>
-                        <i class="fa fa-university"></i>
-                    </h3>
+                <!--<span class="control-item" style="padding-top: 1em;border-left: 0;">-->
+                    <!--<h3>-->
+                        <!--<i class="fa fa-university"></i>-->
+                    <!--</h3>-->
 
-                </span>
-                <span class="control-item" style="padding-top: 1em;border-left: 0;">
-                    <h3>
-                        <i class="fa fa-shopping-cart"></i>
-                    </h3>
-                </span>
-                                <span class="control-item " style="padding-top: 1em;border-left: 0;">
-                    <h3>
-                        <i class="fa fa-tree"></i>
-                    </h3>
-                </span>
-                </span>
-                                <span class="control-item " style="padding-top: 1em;border-left: 0;">
-                    <h3>
-                        <i class="fa fa-suitcase"></i>
-                    </h3>
-                </span>
+                <!--</span>-->
+                <!--<span class="control-item" style="padding-top: 1em;border-left: 0;">-->
+                    <!--<h3>-->
+                        <!--<i class="fa fa-shopping-cart"></i>-->
+                    <!--</h3>-->
+                <!--</span>-->
+                                <!--<span class="control-item " style="padding-top: 1em;border-left: 0;">-->
+                    <!--<h3>-->
+                        <!--<i class="fa fa-tree"></i>-->
+                    <!--</h3>-->
+                <!--</span>-->
+                <!--</span>-->
+                                <!--<span class="control-item " style="padding-top: 1em;border-left: 0;">-->
+                    <!--<h3>-->
+                        <!--<i class="fa fa-suitcase"></i>-->
+                    <!--</h3>-->
+                <!--</span>-->
+            <!--</div>-->
+        <!--</li>-->
+
+        <li class="table-view-cell">
+            <div>
+
+                <p>
+                    <i class="fa fa-phone" style="margin-right: .5em;"></i>
+                    {{ rep.phone }}
+                </p>
+            </div>
+            <div>
+                <p>
+                    <i class="fa fa-envelope" style="margin-right: .5em;"></i>
+                    {{ rep.email }}
+                </p>
             </div>
         </li>
+
         <li class="table-view-cell table-view-divider"></li>
         <li style="background-color: #5cb85c;">
 
@@ -77,11 +106,6 @@
             </button>
 
         </li>
-
-
-        </li>
-        <li ></li>
-
     </ul>
 </div>
 

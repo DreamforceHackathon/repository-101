@@ -43922,55 +43922,34 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
         }]);;angular.module('callforce').service('repService', ['$http',
     function ($http) {
 
+        this.reps = [
+            {
+                id: 1,
+                name: 'John Smith',
+                summary: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                work_experience: 'did stuff',
+                education: 'Berkeley',
+                number_of_closes: 14,
+                number_of_calls: 100,
+                total_sales: 12543,
+                total_earnings: 1200,
+                created_at: '1 day ago',
+                photo_url: '',
+                age: 44,
+                email: 'boss@teleamericorp.com',
+                phone: '(725) 345-1254'
+            }
+        ];
+
         this.getPendingReps = function(){
-          return [
-              {
-                  id: 1,
-                  name: 'John Smith',
-                  closing_ratio: .56,
-                  average_deal_size: 2000,
-                  pending_since: '1 day ago'
-
-              },
-              {
-                  id: 2,
-                  name: 'Scott Mescudi',
-                  closing_ratio: .56,
-                  average_deal_size: 2000,
-                  number_of_closes: 134,
-                  pending_since: '1 day ago'
-
-
-              },
-              {
-                  id: 3,
-                  name: 'Curtis Jackson',
-                  closing_ratio: .56,
-                  average_deal_size: 2000,
-                  number_of_closes: 134,
-                  pending_since: '1 day ago'
-
-
-              },
-              {
-                  id: 4,
-                  name: 'Barack Obama',
-                  closing_ratio: .56,
-                  average_deal_size: 2000,
-                  number_of_closes: 134,
-                    pending_since: '1 day ago'
-              }
-          ];
+            return this.reps;
         };
 
         this.getRep = function(repId){
-            return {
-                id: 4,
-                name: 'Barack Obama',
-                closing_ratio: .56,
-                average_deal_size: 2000,
-                number_of_closes: 134,
-                pending_since: '1 day ago'
+            for (var i = 0; i < this.reps.length; i++){
+                if (this.reps[i].id == repId){
+                    return this.reps[i];
+                }
             }
         }
 
