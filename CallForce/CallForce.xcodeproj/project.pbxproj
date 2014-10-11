@@ -11,6 +11,7 @@
 		01F2D65719E9C2BD0069CE61 /* LoginController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F2D65619E9C2BD0069CE61 /* LoginController.storyboard */; };
 		01F2D65919E9C30C0069CE61 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65819E9C30C0069CE61 /* GradientView.swift */; };
 		1D080AB419E9CCAF006A45E3 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D080AB219E9CCAF006A45E3 /* ProductViewController.m */; };
+		1D080AB719E9CE52006A45E3 /* ProductViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */; };
 		1DD8163419E914C4001DECCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163319E914C4001DECCC /* main.m */; };
 		1DD8163719E914C4001DECCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163619E914C4001DECCC /* AppDelegate.m */; };
 		1DD8163A19E914C4001DECCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163919E914C4001DECCC /* ViewController.m */; };
@@ -46,6 +47,7 @@
 		01F2D65819E9C30C0069CE61 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1D080AAF19E9CC9D006A45E3 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
 		1D080AB219E9CCAF006A45E3 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
+		1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductViewController.storyboard; sourceTree = "<group>"; };
 		1DD8162E19E914C4001DECCC /* CallForce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallForce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD8163219E914C4001DECCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DD8163319E914C4001DECCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				1D080AB219E9CCAF006A45E3 /* ProductViewController.m */,
+				1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */,
 				1D080AAF19E9CC9D006A45E3 /* ProductViewController.h */,
 				1DD8165D19E91D6E001DECCC /* Phone.m */,
 				1DD8165A19E91D3E001DECCC /* Phone.h */,
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DD8163D19E914C4001DECCC /* Main.storyboard in Resources */,
+				1D080AB719E9CE52006A45E3 /* ProductViewController.storyboard in Resources */,
 				1DD8164219E914C4001DECCC /* LaunchScreen.xib in Resources */,
 				01F2D65719E9C2BD0069CE61 /* LoginController.storyboard in Resources */,
 				1DD8163F19E914C4001DECCC /* Images.xcassets in Resources */,

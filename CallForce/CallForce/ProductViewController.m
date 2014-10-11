@@ -11,6 +11,10 @@
 #import "Phone.h"
 
 @interface ProductViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UITextView *summaryText;
+@property (weak, nonatomic) IBOutlet UILabel *productNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *companyNameLabel;
 
 @end
 
@@ -20,21 +24,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     // You can customize MDCSwipeToChooseView using MDCSwipeToChooseViewOptions.
-    MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
+    MDCSwipeOptions *options = [MDCSwipeOptions new];
     options.delegate = self;
-    options.likedText = @"Keep";
-    options.likedColor = [UIColor blueColor];
-    options.nopeText = @"Delete";
     options.onPan = ^(MDCPanState *state){
         if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft) {
             NSLog(@"Let go now to delete the photo!");
         }
     };
     
-    MDCSwipeToChooseView *view = [[MDCSwipeToChooseView alloc] initWithFrame:self.view.bounds
-                                                                     options:options];
-    view.imageView.image = [UIImage imageNamed:@"photo"];
-    [self.view addSubview:view];
+    [self.view mdc_swipe:options];
+    
+    [self.summaryText setText:@"asdfasdfsdaf"];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
