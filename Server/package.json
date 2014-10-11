@@ -3,7 +3,16 @@
   "description": "server for CallForce",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
   "dependencies": {
-    "express": "4.x"
+    "express": "4.x",
+    "twilio": "1.7.0"
+  },
+  "devDependencies": {
+    "flare-gun": "0.4.0",
+    "joi": "4.7.0",
+    "mocha": "1.21.5"
   }
 }
