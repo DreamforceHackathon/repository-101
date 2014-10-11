@@ -748,7 +748,7 @@
 				<array>
 					<string>$(inherited)</string>
 					<string>$(PROJECT_DIR)/CallForce/Libraries</string>
-					<string>/Users/henrythe9th/Waterloo/Hackathon/CallForce/TwilioClient/Libraries</string>
+					<string>${PROJECT_DIR}/TwilioClient/Libraries</string>
 				</array>
 				<key>OTHER_LDFLAGS</key>
 				<string>-ObjC</string>
@@ -782,7 +782,7 @@
 				<array>
 					<string>$(inherited)</string>
 					<string>$(PROJECT_DIR)/CallForce/Libraries</string>
-					<string>/Users/henrythe9th/Waterloo/Hackathon/CallForce/TwilioClient/Libraries</string>
+					<string>${PROJECT_DIR}/TwilioClient/Libraries</string>
 				</array>
 				<key>OTHER_LDFLAGS</key>
 				<string>-ObjC</string>

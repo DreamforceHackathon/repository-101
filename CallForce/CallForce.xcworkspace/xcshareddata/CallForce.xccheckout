@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6D419CD5-C814-4F67-B909-F08EE2107A8B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CallForce</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D5BF5827ED70E18655DFC21DB52B23C27F0D2148</key>
+		<string>github.com:DreamforceHackathon/repository-101.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CallForce/CallForce.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D5BF5827ED70E18655DFC21DB52B23C27F0D2148</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:DreamforceHackathon/repository-101.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D5BF5827ED70E18655DFC21DB52B23C27F0D2148</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D5BF5827ED70E18655DFC21DB52B23C27F0D2148</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CallForce</string>
+		</dict>
+	</array>
+</dict>
+</plist>
