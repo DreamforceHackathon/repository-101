@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CallForce-Swift.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+  
+  UIStoryboard *sideMenuStoryboard = [UIStoryboard storyboardWithName:@"SideMenuController" bundle:nil];
+  SideMenuController *sideMenuController = [sideMenuStoryboard instantiateInitialViewController];
+  self.window.rootViewController = sideMenuController;
+  [self.window makeKeyAndVisible];
+  
+//
+//  let mainStoryboard = UIStoryboard(name: "HomeController", bundle: nil)
+//  let homeController = mainStoryboard.instantiateInitialViewController() as UINavigationController
+//  let sideMenuStoryboard = UIStoryboard(name: "SideMenuController", bundle: nil)
+//  let sideMenuController = sideMenuStoryboard.instantiateInitialViewController() as SideMenuController
+//  
+//  sideMenuController.homeController = homeController
+//  
+//  var revealController = SWRevealViewController(rearViewController: sideMenuController, frontViewController: homeController)
+//  //    revealController.rearViewRevealWidth = 215
+//  
+//  window?.rootViewController = revealController
+//  window?.makeKeyAndVisible()
     return YES;
 }
 

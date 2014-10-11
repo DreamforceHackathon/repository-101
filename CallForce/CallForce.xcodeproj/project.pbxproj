@@ -10,6 +10,9 @@
 		01F2D65519E9C2740069CE61 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65419E9C2740069CE61 /* LoginController.swift */; };
 		01F2D65719E9C2BD0069CE61 /* LoginController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F2D65619E9C2BD0069CE61 /* LoginController.storyboard */; };
 		01F2D65919E9C30C0069CE61 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65819E9C30C0069CE61 /* GradientView.swift */; };
+		01F2D65B19E9CDAD0069CE61 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65A19E9CDAD0069CE61 /* SideMenuController.swift */; };
+		01F2D65D19E9CDB70069CE61 /* SideMenuController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F2D65C19E9CDB70069CE61 /* SideMenuController.storyboard */; };
+		01F2D65F19E9DAAD0069CE61 /* NavigationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65E19E9DAAD0069CE61 /* NavigationTableViewCell.swift */; };
 		1D080AB419E9CCAF006A45E3 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D080AB219E9CCAF006A45E3 /* ProductViewController.m */; };
 		1D080AB719E9CE52006A45E3 /* ProductViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */; };
 		1DD8163419E914C4001DECCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163319E914C4001DECCC /* main.m */; };
@@ -45,6 +48,9 @@
 		01F2D65419E9C2740069CE61 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		01F2D65619E9C2BD0069CE61 /* LoginController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginController.storyboard; sourceTree = "<group>"; };
 		01F2D65819E9C30C0069CE61 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		01F2D65A19E9CDAD0069CE61 /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
+		01F2D65C19E9CDB70069CE61 /* SideMenuController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenuController.storyboard; sourceTree = "<group>"; };
+		01F2D65E19E9DAAD0069CE61 /* NavigationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTableViewCell.swift; sourceTree = "<group>"; };
 		1D080AAF19E9CC9D006A45E3 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
 		1D080AB219E9CCAF006A45E3 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductViewController.storyboard; sourceTree = "<group>"; };
@@ -147,6 +153,9 @@
 				1DD8163819E914C4001DECCC /* ViewController.h */,
 				1DD8163919E914C4001DECCC /* ViewController.m */,
 				01F2D65419E9C2740069CE61 /* LoginController.swift */,
+				01F2D65A19E9CDAD0069CE61 /* SideMenuController.swift */,
+				01F2D65E19E9DAAD0069CE61 /* NavigationTableViewCell.swift */,
+				01F2D65C19E9CDB70069CE61 /* SideMenuController.storyboard */,
 				01F2D65619E9C2BD0069CE61 /* LoginController.storyboard */,
 				1DD8163B19E914C4001DECCC /* Main.storyboard */,
 				1DD8163E19E914C4001DECCC /* Images.xcassets */,
@@ -293,6 +302,7 @@
 			files = (
 				1DD8163D19E914C4001DECCC /* Main.storyboard in Resources */,
 				1D080AB719E9CE52006A45E3 /* ProductViewController.storyboard in Resources */,
+				01F2D65D19E9CDB70069CE61 /* SideMenuController.storyboard in Resources */,
 				1DD8164219E914C4001DECCC /* LaunchScreen.xib in Resources */,
 				01F2D65719E9C2BD0069CE61 /* LoginController.storyboard in Resources */,
 				1DD8163F19E914C4001DECCC /* Images.xcassets in Resources */,
@@ -347,12 +357,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DD8165F19E91D6E001DECCC /* Phone.m in Sources */,
+				01F2D65B19E9CDAD0069CE61 /* SideMenuController.swift in Sources */,
 				1DD8163A19E914C4001DECCC /* ViewController.m in Sources */,
 				01F2D65519E9C2740069CE61 /* LoginController.swift in Sources */,
 				01F2D65919E9C30C0069CE61 /* GradientView.swift in Sources */,
 				1DD8163719E914C4001DECCC /* AppDelegate.m in Sources */,
 				1DD8163419E914C4001DECCC /* main.m in Sources */,
 				1D080AB419E9CCAF006A45E3 /* ProductViewController.m in Sources */,
+				01F2D65F19E9DAAD0069CE61 /* NavigationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
