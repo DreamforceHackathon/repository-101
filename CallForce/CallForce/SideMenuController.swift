@@ -2,6 +2,7 @@ import UIKit
 
 class SideMenuController : UIViewController, UITableViewDataSource, UITableViewDelegate {
   @IBOutlet weak var gradientView: GradientView!
+  @IBOutlet weak var profileImage: UIImageView!
   
   let blueColor = UIColor(red: 122/255, green: 103/255, blue: 175/255, alpha: 0.6).CGColor
   let purpleColor = UIColor(red: 84/255, green: 0.502, blue: 0.667, alpha: 0.6).CGColor
@@ -14,6 +15,13 @@ class SideMenuController : UIViewController, UITableViewDataSource, UITableViewD
     
     let colors:[AnyObject] = [blueColor, purpleColor]
     gradientView.drawGradient(colors)
+    
+    profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
+    profileImage.clipsToBounds = true
+  }
+  
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return UIStatusBarStyle.LightContent
   }
   
   // UITableViewDataSource methods
