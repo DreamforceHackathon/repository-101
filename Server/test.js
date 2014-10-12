@@ -1,7 +1,13 @@
 var Flare = require('flare-gun')
-var app = require('./server')
-var flare = new Flare().express(app)
+var flare = null
 var Joi = require('joi')
+
+before(function (done) {
+  require('./server')(function (oauth, app) {
+    flare = new Flare().express(app)
+    done()
+  })
+})
 
 describe('test', function () {
   it('hello', function () {
@@ -44,13 +50,14 @@ describe('products', function () {
     return flare
       .get('/products')
       .expect(200, Joi.array().includes({
-        id: Joi.number(),
+        id: Joi.any(),
         name: Joi.string(),
         company: Joi.string(),
         description: Joi.string(),
-        leadCount: Joi.number(),
-        pricePoint: Joi.number(),
-        commission: Joi.number()
+        numberOfLeads: Joi.number(),
+        price: Joi.number(),
+        commissionPercent: Joi.number(),
+        photoUrl: Joi.string()
       }))
   })
 

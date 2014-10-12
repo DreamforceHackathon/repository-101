@@ -14,6 +14,7 @@ var TWILIO_APP_SID = process.env.twilio_APP_SID
 var S_USERNAME = process.env.S_USERNAME
 var S_PASSWORD = process.env.S_PASSWORD
 
+var oauth = null
 var org = nforce.createConnection({
   clientId: '3MVG9xOCXq4ID1uHhtUqMuHpGog1YjljbHSCw0abr583NjRe_Wcz5BLxk4m.QTQpLGmbWXDxm6FrJtfFHlN2L',
   clientSecret: '97071771698148849',
@@ -23,21 +24,6 @@ var org = nforce.createConnection({
   mode: 'multi', // optional, 'single' or 'multi' user mode, multi default
   autoRefresh: true
 });
-
-
-org.authenticate({ username: S_USERNAME, password: S_PASSWORD}, function(err, oauth){
-  // store the oauth object for this user
-  if (err)  return console.log(err);
-
-  var params = ['id', 'description__c', 'number_of_leads__c', 'price__c', 'company__c', 'commission_percent__c', 'name__c', 'photo_url__c' ]
-  org.query({query: 'SELECT ' + params.join(', ') + ' FROM Product2 where price__c != null limit 5', oauth: oauth}, function (err, res) {
-    if (err) return console.log(err);
-    _.forEach(res.records, function (record) {
-      console.log(record._fields);
-    })
-  })
-});
-
 
 var server = app.listen(3000, function() {
     console.log('Listening on port %d', server.address().port);
@@ -77,26 +63,49 @@ app.post('/users', function (req, res) {
 })
 
 app.get('/products', function (req, res) {
-  res.json([
-    {
-      id: 1,
-      name: 'umbrella',
-      company: 'umbrella corp',
-      description: 'The best umbrella ever',
-      leadCount: 20,
-      pricePoint: 15,
-      commission: 0.20
-    },
-    {
-      id: 2,
-      name: 'iphone',
-      company: 'apple',
-      description: 'we\'re watching you',
-      leadCount: 100,
-      pricePoint: 300,
-      commission: 0.05
-    }
-  ])
+  var params = ['id', 'description__c', 'number_of_leads__c', 'price__c', 'company__c', 'commission_percent__c', 'name__c', 'photo_url__c' ]
+  org.query({query: 'SELECT ' + params.join(', ') + ' FROM Product2 where price__c != null', oauth: oauth}, function (err, data) {
+    if (err) return console.log(err);
+
+
+    result = _.map(data.records, function (record) {
+      var r = record._fields
+      return {
+        id: r.id,
+        name: r.name__c,
+        company: r.company__c,
+        description: r.description__c,
+        numberOfLeads: Number(r.number_of_leads__c),
+        price: Number(r.price__c),
+        commissionPercent: Number(r.commission_percent__c),
+        photoUrl: r.photo_url__c
+      }
+    })
+
+    console.log('GET /products', result);
+    res.json(result)
+  })
+
+  // res.json([
+  //   {
+  //     id: 1,
+  //     name: 'umbrella',
+  //     company: 'umbrella corp',
+  //     description: 'The best umbrella ever',
+  //     leadCount: 20,
+  //     pricePoint: 15,
+  //     commission: 0.20
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'iphone',
+  //     company: 'apple',
+  //     description: 'we\'re watching you',
+  //     leadCount: 100,
+  //     pricePoint: 300,
+  //     commission: 0.05
+  //   }
+  // ])
 })
 
 app.post('/products/:id/accept', function (req, res) {
@@ -125,4 +134,9 @@ app.post('/leads/:id', function (req, res) {
   })
 })
 
-module.exports = app
+module.exports = function (cb) {
+  org.authenticate({ username: S_USERNAME, password: S_PASSWORD}, function(err, _oauth){
+    oauth = _oauth
+  cb(_oauth, app)
+});
+}
