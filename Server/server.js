@@ -34,10 +34,13 @@ app.use(cookieParser())
 app.use(session({secret: 'keyboard cat!!!!!!!!!!', resave: true, saveUninitialized: true}))
 app.use(org.expressOAuth({onSuccess: '/home', onError: '/oauth/error'}));  // <--- nforce middleware
 
+// serve company client and assets statically
+app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/dist'));
 
-app.get('/', function(req, res){
-  res.send('Hello World!');
-});
+//app.get('/', function(req, res){
+//  res.send('Hello World!');
+//});
 
 app.get('/twilioToken', function (req, res) {
 
