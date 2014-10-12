@@ -20,16 +20,20 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - IOSLinkedInAPI (2.0.0):
+    - AFNetworking (>= 2.0.0)
   - MDCSwipeToChoose (0.2.1)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - IOSLinkedInAPI
   - MDCSwipeToChoose
   - SWRevealViewController
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  IOSLinkedInAPI: 5b400668a260a3594af94e363ade95933ce22db8
   MDCSwipeToChoose: 54f7b1675eff182cdc46c582360c7fca4c766a67
   SWRevealViewController: f6d80638b8e12323e87ac79562345403a799cb77
 

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-CallForce-IOSLinkedInAPI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CallForce-MDCSwipeToChoose.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>10FF6A0565A04B75B3FECD9E</key>
+		<key>1CE9CDEA894A4CBABCFD0CAD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1170AEB418464448B843686D</key>
+		<key>2B1EEC804EE04D58A4DA8035</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B53FFD3B634645739A95E581</key>
+		<key>812FF440301C485BA6760812</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BDAFD69DFF744DE1871F572A</key>
+		<key>EF097578F6A645DABBCC455D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFFEB26795374AF4A6D9068C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
