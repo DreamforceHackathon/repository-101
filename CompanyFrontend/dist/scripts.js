@@ -43890,18 +43890,43 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
 });;angular.module('callforce').controller('ActiveCtrl',
     [
         '$scope',
-        function ($scope) {
+        'repService',
+        '$state',
+        function ($scope, repService, $state) {
 
+            $scope.reps = repService.getActiveReps();
 
+            $scope.showDetail = function(repId){
+                $state.go('base.detail',
+                    {
+                        repId: repId
+                    });
+            };
 
         }]);;angular.module('callforce').controller('DetailCtrl',
     [
         '$scope',
         '$stateParams',
         'repService',
-        function ($scope, $stateParams, repService) {
+        '$state',
+        'tabService',
+        function ($scope, $stateParams, repService, $state, tabService) {
 
             $scope.rep = repService.getRep($stateParams.repId);
+
+            $scope.rejectRep = function(repId){
+                repService.rejectRep(repId);
+                tabService.isActive = false;
+                tabService.isPending = true;
+                $state.go('base.pending');
+            };
+
+            $scope.acceptRep = function(repId){
+                repService.acceptRep(repId);
+                tabService.isActive = true;
+                tabService.isPending = false;
+                $state.go('base.active');
+            };
 
         }]);;angular.module('callforce').controller('PendingCtrl',
     [
@@ -43934,15 +43959,49 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
                 total_sales: 12543,
                 total_earnings: 1200,
                 created_at: '1 day ago',
-                photo_url: '',
+                photo_url: 'http://placehold.it/42x42',
                 age: 44,
                 email: 'boss@teleamericorp.com',
-                phone: '(725) 345-1254'
+                phone: '(725) 345-1254',
+                pending: true,
+                visible: true
             }
         ];
 
         this.getPendingReps = function(){
-            return this.reps;
+            var pendingReps = [];
+            for (var i = 0; i < this.reps.length; i++){
+                if (this.reps[i].pending) {
+                    pendingReps.push(this.reps[i])
+                }
+            }
+            return pendingReps;
+        };
+
+        this.getActiveReps = function(){
+            var activeReps = [];
+            for (var i = 0; i < this.reps.length; i++){
+                if (this.reps[i].pending == null || !this.reps[i].pending) {
+                    activeReps.push(this.reps[i])
+                }
+            }
+            return activeReps;
+        };
+
+        this.acceptRep = function(repId) {
+            for (var i = 0; i < this.reps.length; i++){
+                if (this.reps[i].id == repId){
+                    this.reps[i].pending = false;
+                }
+            }
+        };
+
+        this.rejectRep = function(repId){
+            for (var i = 0; i < this.reps.length; i++){
+                if (this.reps[i].id == repId){
+                    this.reps[i].visible = false;
+                }
+            }
         };
 
         this.getRep = function(repId){
@@ -43957,22 +44016,33 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
     [
         '$scope',
         '$state',
-        function ($scope, $state) {
+        'tabService',
+        function ($scope, $state, tabService) {
 
-            $scope.isActive = false;
-            $scope.isPending = true;
+            $scope.isActive = function(){
+                return tabService.isActive;
+            };
+            $scope.isPending = function(){
+                return tabService.isPending;
+            };
 
             $scope.clickActive = function(){
-                $scope.isPending = false;
-                $scope.isActive = true;
+                tabService.isPending = false;
+                tabService.isActive = true;
                 $state.go('base.active');
             };
 
             $scope.clickPending = function(){
-                $scope.isPending = true;
-                $scope.isActive = false;
+                tabService.isPending = true;
+                tabService.isActive = false;
                 $state.go('base.pending');
             };
 
 
-        }]);
+        }]);;angular.module('callforce').service('tabService', ['$http',
+    function ($http) {
+
+        this.isActive = false;
+        this.isPending = true;
+
+    }]);

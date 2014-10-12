@@ -1,7 +1,8 @@
 <div class="card">
     <ul class="table-view"
         ng-repeat="rep in reps">
-        <li class="table-view-cell media"
+        <li ng-if="rep.visible"
+            class="table-view-cell media"
             ng-click="showDetail(rep.id)">
             <a class="navigate-right">
                 <img class="media-object pull-left" src="http://placehold.it/42x42">
@@ -9,10 +10,10 @@
                     {{ rep.name }}
                     <p>
                         <span class="badge badge-inverted badge-primary">
-                            {{ rep.closing_ratio }}
+                            {{ rep.number_of_closes / rep.number_of_calls | number:2 }}
                         </span>
                         <span class="badge badge-inverted badge-positive">
-                            ${{ rep.average_deal_size }}
+                            ${{ rep.total_sales / rep.number_of_closes | number:2}}
                         </span>
                     </p>
                 </div>

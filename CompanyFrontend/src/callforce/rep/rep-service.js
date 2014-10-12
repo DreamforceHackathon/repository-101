@@ -13,15 +13,49 @@ angular.module('callforce').service('repService', ['$http',
                 total_sales: 12543,
                 total_earnings: 1200,
                 created_at: '1 day ago',
-                photo_url: '',
+                photo_url: 'http://placehold.it/42x42',
                 age: 44,
                 email: 'boss@teleamericorp.com',
-                phone: '(725) 345-1254'
+                phone: '(725) 345-1254',
+                pending: true,
+                visible: true
             }
         ];
 
         this.getPendingReps = function(){
-            return this.reps;
+            var pendingReps = [];
+            for (var i = 0; i < this.reps.length; i++){
+                if (this.reps[i].pending) {
+                    pendingReps.push(this.reps[i])
+                }
+            }
+            return pendingReps;
+        };
+
+        this.getActiveReps = function(){
+            var activeReps = [];
+            for (var i = 0; i < this.reps.length; i++){
+                if (this.reps[i].pending == null || !this.reps[i].pending) {
+                    activeReps.push(this.reps[i])
+                }
+            }
+            return activeReps;
+        };
+
+        this.acceptRep = function(repId) {
+            for (var i = 0; i < this.reps.length; i++){
+                if (this.reps[i].id == repId){
+                    this.reps[i].pending = false;
+                }
+            }
+        };
+
+        this.rejectRep = function(repId){
+            for (var i = 0; i < this.reps.length; i++){
+                if (this.reps[i].id == repId){
+                    this.reps[i].visible = false;
+                }
+            }
         };
 
         this.getRep = function(repId){

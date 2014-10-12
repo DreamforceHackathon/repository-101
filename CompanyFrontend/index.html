@@ -29,7 +29,7 @@
     <nav class="bar bar-tab"
          ng-controller="TabCtrl">
         <a class="tab-item"
-           ng-class="{'active': isPending}"
+           ng-class="{'active': isPending()}"
            ng-click="clickPending()">
             <span class="icon">
                 <i class="fa fa-users"></i>
@@ -39,10 +39,10 @@
             </span>
         </a>
         <a class="tab-item"
-           ng-class="{'active': isActive}"
+           ng-class="{'active': isActive()}"
            ng-click="clickActive()">
             <span class="icon">
-                <i class="fa fa-line-chart"></i>
+                <i class="fa fa-child"></i>
             </span>
             <span class="tab-label">
                 Active
