@@ -10,6 +10,7 @@ class LeadController : UIViewController, CallViewDelegate {
   @IBOutlet weak var leadImageView: UIImageView!
   @IBOutlet weak var bottomView: UIView!
   @IBOutlet weak var infoBottomView: UIView!
+  var phone:Phone!
 
   @IBAction func callButtonPressed(sender: AnyObject) {
     infoBottomView.hidden = true
@@ -43,6 +44,7 @@ class LeadController : UIViewController, CallViewDelegate {
 
     leadImageView.layer.cornerRadius = leadImageView.frame.size.width / 2
     leadImageView.clipsToBounds = true
+    
   }
   
   func closedButtonPressed(sender: AnyObject) {
