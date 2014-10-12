@@ -947,10 +947,10 @@ select {
   border-left-width: 0;
 }
 .segmented-control .control-item:active {
-  background-color: #eee;
+  /*background-color: #eee;*/
 }
 .segmented-control .control-item.active {
-  background-color: #ccc;
+  /*background-color: #ccc;*/
 }
 
 .segmented-control-primary {

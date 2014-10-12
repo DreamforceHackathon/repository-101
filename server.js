@@ -79,23 +79,96 @@ app.post('/twiML', function (req, res) {
 var user  = {}
 
 var users = [
-  {
+
+{
     id: 1,
-    name: 'John Smith',
-    summary: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    work_experience: 'did stuff',
-    education: 'Berkeley',
-    number_of_closes: 14,
-    number_of_calls: 100,
-    total_sales: 12543,
+        name: 'Jackson Palatso',
+    summary: 'Proven outbound B2C sales experience with a passion for meeting new people and gaining new experiences.',
+    work_experience: '2 year experience in inside sales carrying and exceeding my quota. Currently traveling the US!',
+    education: 'Bentley College',
+    number_of_closes: 23,
+    number_of_calls: 114,
+    total_sales: 8000,
     total_earnings: 1200,
-    created_at: '1 day ago',
-    photo_url: 'http://placehold.it/42x42',
-    age: 44,
-    email: 'boss@teleamericorp.com',
-    phone: '(725) 345-1254',
+    created_at: '270 days ago',
+    photo_url: 'http://i.imgur.com/2YqAk3m.jpg',
+    age: 23,
+    email: 'Jackson@gmail.com',
+    phone: '(617) 219-1254',
     pending: true
-  }
+},
+
+{
+    id: 2,
+        name: 'Maryann Thomas',
+    summary: 'Energetic economics student looking to make extra cash via outbound sales to help pay for tuition!',
+    work_experience: 'Currently the president of Kappa Kappa Gamma and the Chess club. Looking to expand upon my retail sales experience!',
+    education: 'Vanderbilt University',
+    number_of_closes: 4,
+    number_of_calls: 37,
+    total_sales: 780,
+    total_earnings: 117,
+    created_at: '20 days ago',
+    photo_url: 'http://i.imgur.com/k5AnHjY.jpg',
+    age: 19,
+    email: 'MaryAnnT@gmail.com',
+    phone: '(314) 782-1522',
+    pending: true
+},
+
+{
+    id: 3,
+        name: 'Jack Mandelbom',
+    summary: 'Seasoned sales professional with 25 years experience building and training outbound sales teams across 4 companies!',
+    work_experience: 'Led 4 sales organizations. Exceeded sales quota for 21 of 25 years, Achieved presidents club 5 times. Excited to advise the CallForce team and use the product myself!',
+    education: 'Dartmouth College',
+    number_of_closes: 21,
+        number_of_calls: 192,
+    total_sales: 39605,
+    total_earnings: 891,
+    created_at: '104 days ago',
+    photo_url: 'http://i.imgur.com/Q3RaImZ.jpg',
+    age: 61,
+    email: 'JackM@hotmail.com',
+    phone: '(415) 620-2137',
+    pending: true
+},
+
+{
+    id: 4,
+        name: 'Jason Mok',
+    summary: 'Experienced b2b salesman with 5 years experience selling broadband cable products to enterprise accounts.',
+    work_experience: 'Was recently laid off and am now working full time for CallForce. Love the flexibility to sell multiple products on my schedule! Hire me and you won’t be disappointed.',
+    education: 'UCLA',
+    number_of_closes: 99,
+    number_of_calls: 1352,
+    total_sales: 95713,
+    total_earnings: 14357,
+    created_at: '217 days ago',
+    photo_url: 'http://i.imgur.com/NVGLPKw.jpg',
+    age: 29,
+    email: 'JasonM@gmail.com',
+    phone: '(512) 267-1931',
+    pending: false
+},
+
+{
+    id: 5,
+        name: 'Meghan Taylor',
+    summary: 'Experienced automobile sales professional at GM. Consistently exceeded sales quota and set the monthly sales record for Detroit’s Chevy dealership!',
+    work_experience: 'Was recently laid off by GM. Now working part-time in auto sales for helping to save the planet one EV at a time!',
+    education: 'UCLA',
+    number_of_closes: 14,
+    number_of_calls: 219,
+    total_sales: 114357,
+    total_earnings: 114357,
+    created_at: '217 days ago',
+    photo_url: 'http://i.imgur.com/2ZfFg9o.jpg',
+    age: 42,
+    email: 'MTaylor@aol.com',
+    phone: '(231) 631-4123',
+    pending: false
+}
 ]
 
 app.post('/users', function (req, res) {

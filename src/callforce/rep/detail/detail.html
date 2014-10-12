@@ -1,11 +1,29 @@
 <div class="card">
     <ul class="table-view">
-        <li class="table-view-cell">
+        <li class="table-view-cell" style="padding: 11px 15px 11px 15px;">
                 <img class="media-object pull-left" ng-src="{{ rep.photo_url }}">
                 <div class="media-body">
                     {{ rep.name }}
-                    <p>
-                        Member since {{ rep.created_at }}
+                    <p style="margin-top: 1em;">
+                    <div>
+
+                        <p style="font-size: 10pt;">
+                            <i class="fa fa-bank" ></i>
+                            {{ rep.education }}
+                        </p>
+                    </div>
+                    <div>
+                        <p style="font-size: 10pt;">
+                            <i class="fa fa-calendar" style="margin-left: .1em;margin-right: .2em;"></i>
+                            {{ rep.age }} years old
+                        </p>
+                    </div>
+                    <!--<div>-->
+                        <!--<p style="font-size: 10pt;">-->
+                            <!--<i class="fa fa-calendar"></i>-->
+                            <!--Joined {{ rep.created_at }}-->
+                        <!--</p>-->
+                    <!--</div>-->
                     </p>
                 </div>
         </li>
