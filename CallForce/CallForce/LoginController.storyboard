@@ -54,7 +54,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="gradientView" destination="fxE-X2-GSR" id="KzZ-a9-1ih"/>
+                        <outlet property="gradientView" destination="fxE-X2-GSR" id="P0g-or-hML"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8T6-8x-bnX" userLabel="First Responder" sceneMemberID="firstResponder"/>

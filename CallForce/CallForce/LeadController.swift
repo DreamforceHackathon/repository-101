@@ -32,10 +32,20 @@ class LeadController : UIViewController, CallViewDelegate {
   let url = ""
   var leads:[[String:String]]!
   var leadIndex = 0
+  
+  var showedLogin = true
     
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    
+//    if showLogin {
+//      let loginStoryBoard = UIStoryboard(name: "LoginController", bundle: nil)
+//      let loginController = loginStoryBoard.instantiateInitialViewController() as LoginController
+//      self.presentViewController(loginController, animated: true, completion: nil)
+//      showLogin = false
+//    }
     
     menuButton.target = self.revealViewController()
     menuButton.action = Selector("revealToggle:")

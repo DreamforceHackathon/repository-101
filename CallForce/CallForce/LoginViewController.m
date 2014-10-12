@@ -25,7 +25,10 @@ LIALinkedInHttpClient *_client;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//  UIColor *purpleColor = [UIColor colorWithRed:122/255 green:103/255 blue:175/255 alpha:0.6];
+//  UIColor *blueColor =  [UIColor colorWithRed:84/255 green:0.502 blue:0.667 alpha:0.6];
+//  NSArray *colors = @[purpleColor, blueColor];
+//  [self.gradientView drawGradient:colors];
     _client = [self client];
 }
 
