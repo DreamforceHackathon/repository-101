@@ -34,14 +34,46 @@ describe('users', function () {
   it('creates', function () {
     return flare
       .post('/users', {
-        id: 1,
-        data: 123
+        id: 1
       })
       .expect(200, {
-        id: 1,
-        data: 123,
-        products: Joi.array()
+        id: Joi.any(),
+        name: Joi.string(),
+        summary: Joi.string(),
+        work_experience: Joi.string(),
+        education: Joi.string(),
+        number_of_closes: Joi.number(),
+        number_of_calls: Joi.number(),
+        total_sales: Joi.number(),
+        total_earnings: Joi.number(),
+        created_at: Joi.string(),
+        photo_url: Joi.string(),
+        age: Joi.number(),
+        email: Joi.string(),
+        phone: Joi.string(),
+        pending: Joi.boolean()
       })
+  })
+  it('gets', function () {
+    return flare
+      .get('/users')
+      .expect(200, Joi.array().includes({
+        id: Joi.any(),
+        name: Joi.string(),
+        summary: Joi.string(),
+        work_experience: Joi.string(),
+        education: Joi.string(),
+        number_of_closes: Joi.number(),
+        number_of_calls: Joi.number(),
+        total_sales: Joi.number(),
+        total_earnings: Joi.number(),
+        created_at: Joi.string(),
+        photo_url: Joi.string(),
+        age: Joi.number(),
+        email: Joi.string(),
+        phone: Joi.string(),
+        pending: Joi.boolean()
+      }))
   })
 })
 

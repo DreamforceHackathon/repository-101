@@ -53,13 +53,52 @@ app.get('/twilioToken', function (req, res) {
   })
 })
 
-var user  = {
-  products: []
-}
+var user  = {}
+
+var users = [
+  {
+    id: 1,
+    name: 'John Smith',
+    summary: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    work_experience: 'did stuff',
+    education: 'Berkeley',
+    number_of_closes: 14,
+    number_of_calls: 100,
+    total_sales: 12543,
+    total_earnings: 1200,
+    created_at: '1 day ago',
+    photo_url: 'http://placehold.it/42x42',
+    age: 44,
+    email: 'boss@teleamericorp.com',
+    phone: '(725) 345-1254',
+    pending: true
+  }
+]
 
 app.post('/users', function (req, res) {
-  user = _.defaults(req.body, user)
+  user = _.defaults(req.body, {
+    id: 1,
+    name: 'John Smith',
+    summary: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    work_experience: 'did stuff',
+    education: 'Berkeley',
+    number_of_closes: 14,
+    number_of_calls: 100,
+    total_sales: 12543,
+    total_earnings: 1200,
+    created_at: '1 day ago',
+    photo_url: 'http://placehold.it/42x42',
+    age: 44,
+    email: 'boss@teleamericorp.com',
+    phone: '(725) 345-1254',
+    pending: true
+  })
+  users.push(user)
   res.json(user)
+})
+
+app.get('/users', function (req, res) {
+  res.json(users)
 })
 
 app.get('/products', function (req, res) {
@@ -89,7 +128,6 @@ app.get('/products', function (req, res) {
 
 app.post('/products/:id/accept', function (req, res) {
   var id = req.params.id
-  user.products.push(id)
   res.json(user)
 })
 
