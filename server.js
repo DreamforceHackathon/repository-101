@@ -50,7 +50,7 @@ app.get('/twilioToken', function (req, res) {
 
   capability.allowClientIncoming('callForce');
   capability.allowClientOutgoing(TWILIO_APP_SID);
-  var token = capability.generate();
+  var token = capability.generate(10000);
   res.json({
     token: token
   })

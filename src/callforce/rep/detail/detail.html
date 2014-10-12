@@ -31,17 +31,19 @@
 
         <li>
             <div class="segmented-control" style="border:none;">
-                <span class="control-item " style="padding-top: 1em;">
-                    <h3>{{ rep.number_of_closes / rep.number_of_calls | number:2 }}</h3>
-                    Closing rate
-                </span>
                 <span class="control-item">
                     <h3>${{ rep.total_sales / rep.number_of_closes | number:2}}</h3>
-                    Avg. deal size
+                    Avg Deal Size
                 </span>
                 <span class="control-item">
                     <h3>{{ rep.number_of_closes }}</h3>
-                    No. closes
+                    Leads Qualified
+                </span>
+
+
+                 <span class="control-item " style="padding-top: 1em;">
+                    <h3>{{(rep.number_of_closes / rep.number_of_calls) * 100 | number:0 }}%</h3>
+                    AE Close Rate
                 </span>
             </div>
         </li>
@@ -57,13 +59,13 @@
                     </p>
         </li>
 
-        <li class="table-view-cell" style="padding: 11px 15px 11px 15px;">
+        <!--<li class="table-view-cell" style="padding: 11px 15px 11px 15px;">-->
 
 
-            <p>
-                {{ rep.work_experience }}
-            </p>
-        </li>
+            <!--<p>-->
+                <!--{{ rep.work_experience }}-->
+            <!--</p>-->
+        <!--</li>-->
 
 
 
@@ -113,7 +115,7 @@
             </div>
         </li>
 
-        <li class="table-view-cell table-view-divider"></li>
+        <li class="table-view-cell table-view-divider" ng-if="rep.pending"></li>
         <li style="background-color: #5cb85c;" ng-if="rep.pending">
 
             <button class="btn-negative btn-block"
