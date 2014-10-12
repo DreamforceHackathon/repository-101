@@ -68,15 +68,18 @@ describe('products', function () {
   })
 })
 
-describe('leads', function () {
+describe.only('leads', function () {
   it('gets all', function () {
     return flare
       .get('/leads')
       .expect(200, Joi.array().includes({
-        id: Joi.number(),
-        productId: Joi.number(),
+        id: Joi.any(),
         name: Joi.string(),
-        phone: Joi.string()
+        company: Joi.string(),
+        industry: Joi.string(),
+        city: Joi.string(),
+        lastContacted: Joi.any(),
+        photoUrl: Joi.string()
       }))
   })
 

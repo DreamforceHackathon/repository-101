@@ -85,27 +85,6 @@ app.get('/products', function (req, res) {
     console.log('GET /products', result);
     res.json(result)
   })
-
-  // res.json([
-  //   {
-  //     id: 1,
-  //     name: 'umbrella',
-  //     company: 'umbrella corp',
-  //     description: 'The best umbrella ever',
-  //     leadCount: 20,
-  //     pricePoint: 15,
-  //     commission: 0.20
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'iphone',
-  //     company: 'apple',
-  //     description: 'we\'re watching you',
-  //     leadCount: 100,
-  //     pricePoint: 300,
-  //     commission: 0.05
-  //   }
-  // ])
 })
 
 app.post('/products/:id/accept', function (req, res) {
@@ -115,14 +94,27 @@ app.post('/products/:id/accept', function (req, res) {
 })
 
 app.get('/leads', function (req, res) {
-  res.json([
-    {
-      id: 1,
-      productId: 1,
-      name: 'james',
-      phone: '123-456-7890'
-    }
-  ])
+  var params = ['id', 'name__c', 'company__c', 'industry__c', 'city__c', 'last_contacted__c', 'photo_url__c' ]
+  org.query({query: 'SELECT ' + params.join(', ') + ' FROM Lead where name__c != null', oauth: oauth}, function (err, data) {
+    if (err) return console.log(err);
+
+
+    result = _.map(data.records, function (record) {
+      var r = record._fields
+      return {
+        id: r.id,
+        name: r.name__c,
+        company: r.company__c,
+        industry: r.industry__c,
+        city: r.city__c,
+        lastContacted: r.last_contacted__c,
+        photoUrl: r.photo_url__c
+      }
+    })
+
+    console.log('GET /leads', result);
+    res.json(result)
+  })
 })
 
 app.post('/leads/:id', function (req, res) {
