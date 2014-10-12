@@ -9,14 +9,6 @@ before(function (done) {
   })
 })
 
-describe('test', function () {
-  it('hello', function () {
-    return flare
-      .get('/')
-      .expect(200, 'Hello World!')
-  })
-})
-
 describe('twilio', function () {
   it('returns a token', function () {
     return flare
