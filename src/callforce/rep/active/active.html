@@ -5,7 +5,7 @@
             class="table-view-cell media"
             ng-click="showDetail(rep.id)">
             <a class="navigate-right">
-                <img class="media-object pull-left" src="{{ rep.photo_url }}" height="42">
+                <img class="media-object pull-left" ng-src="{{ rep.photo_url }}" height="42">
                 <div class="media-body">
                     {{ rep.name }}
                     <p>

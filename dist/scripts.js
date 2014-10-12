@@ -43898,7 +43898,12 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
         '$scope',
         'repService',
         '$state',
-        function ($scope, repService, $state) {
+        '$location',
+        '$anchorScroll',
+        function ($scope, repService, $state, $location, $anchorScroll) {
+
+            var myDiv = document.getElementById('page-content');
+            myDiv.scrollTop = 0;
 
             $scope.reps = repService.getActiveReps();
 
@@ -43916,7 +43921,9 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
         'repService',
         '$state',
         'tabService',
-        function ($scope, $stateParams, repService, $state, tabService) {
+        '$location',
+        '$anchorScroll',
+        function ($scope, $stateParams, repService, $state, tabService, $location, $anchorScroll) {
 
             $scope.rep = repService.getRep($stateParams.repId);
 
@@ -43925,12 +43932,7 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
                 tabService.isActive = false;
                 tabService.isPending = true;
                 $state.go('base.pending');
-                // set the location.hash to the id of
-                // the element you wish to scroll to.
-                $location.hash('top');
 
-                // call $anchorScroll()
-                $anchorScroll();
             };
 
             $scope.acceptRep = function(repId){
@@ -43939,12 +43941,7 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
                 tabService.isPending = false;
                 $state.go('base.active');
 
-                // set the location.hash to the id of
-                // the element you wish to scroll to.
-                $location.hash('top');
 
-                // call $anchorScroll()
-                $anchorScroll();
             };
 
         }]);;angular.module('callforce').controller('PendingCtrl',
@@ -43953,7 +43950,13 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
         'repService',
         '$state',
         'reps',
-        function ($scope, repService, $state, reps) {
+        '$location',
+        '$anchorScroll',
+        '$timeout',
+        function ($scope, repService, $state, reps, $location, $anchorScroll, $timeout) {
+
+            var myDiv = document.getElementById('page-content');
+            myDiv.scrollTop = 0;
 
             $scope.reps = repService.getPendingReps();
 
