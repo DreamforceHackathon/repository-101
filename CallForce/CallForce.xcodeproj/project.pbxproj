@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0138F04519EAFFE500764A11 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0138F04419EAFFE500764A11 /* ProfileController.swift */; };
+		0138F04719EB000700764A11 /* ProfileController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0138F04619EB000700764A11 /* ProfileController.storyboard */; };
 		01C2B79F19EA321D00EB7716 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2B79E19EA321D00EB7716 /* CallView.swift */; };
 		01C3083B19EAF123005F865C /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3083A19EAF123005F865C /* CurrentUser.swift */; };
 		01F2D65519E9C2740069CE61 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65419E9C2740069CE61 /* LoginController.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0138F04419EAFFE500764A11 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		0138F04619EB000700764A11 /* ProfileController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileController.storyboard; sourceTree = "<group>"; };
 		01C2B79E19EA321D00EB7716 /* CallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 		01C3083A19EAF123005F865C /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		01F2D65319E9C2740069CE61 /* CallForce-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallForce-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 				1DD8164019E914C4001DECCC /* LaunchScreen.xib */,
 				1DD8163119E914C4001DECCC /* Supporting Files */,
 				01F2D65319E9C2740069CE61 /* CallForce-Bridging-Header.h */,
+				0138F04419EAFFE500764A11 /* ProfileController.swift */,
+				0138F04619EB000700764A11 /* ProfileController.storyboard */,
 			);
 			path = CallForce;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				01F2D65719E9C2BD0069CE61 /* LoginController.storyboard in Resources */,
 				01F2D66319E9DE770069CE61 /* LeadController.storyboard in Resources */,
 				01F2D66719EA2F330069CE61 /* CallView.xib in Resources */,
+				0138F04719EB000700764A11 /* ProfileController.storyboard in Resources */,
 				1DD8163F19E914C4001DECCC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +405,7 @@
 				1DD8163A19E914C4001DECCC /* ViewController.m in Sources */,
 				01F2D65519E9C2740069CE61 /* LoginController.swift in Sources */,
 				1D52995719EAFF6E000965A9 /* User.m in Sources */,
+				0138F04519EAFFE500764A11 /* ProfileController.swift in Sources */,
 				1D7772F919E9FA6700884E2B /* LoginViewController.m in Sources */,
 				01F2D65919E9C30C0069CE61 /* GradientView.swift in Sources */,
 				1D77730019EA697B00884E2B /* ProductView.m in Sources */,
