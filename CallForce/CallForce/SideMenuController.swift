@@ -36,7 +36,6 @@ class SideMenuController : UIViewController, UITableViewDataSource, UITableViewD
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier, forIndexPath: indexPath) as NavigationTableViewCell
     let key = Array(navigation.keys)[indexPath.row]
-    println("\(key)")
     let icon = navigation[key]!
     
     cell.navLabel?.text = key
