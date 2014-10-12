@@ -9,14 +9,14 @@
                 <div class="media-body">
                     {{ rep.name }}
                     <p>
-                        <span class="badge badge-inverted badge-primary">
-                            Closed {{(rep.number_of_closes / rep.number_of_calls) * 100 | number:0 }}%
-                        </span>
-                        <span class="badge badge-inverted badge-positive">
-                            Avg deal ${{ rep.total_sales / rep.number_of_closes | number:0}}
+                        <span class="badge badge-inverted">
+                            Started selling {{ rep.created_at }}
                         </span>
                     </p>
                 </div>
+                <span class="badge badge-primary"
+                      style="padding: 5px;margin-right: .5em;"
+                      ng-if="rep.new"></span>
             </a>
         </li>
     </ul>

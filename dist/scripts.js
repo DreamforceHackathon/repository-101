@@ -44008,6 +44008,8 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
             for (var i = 0; i < self.reps.length; i++){
                 if (self.reps[i].id == repId){
                     self.reps[i].pending = false;
+                    self.reps[i].created_at = 'a minute ago';
+                    self.reps[i].new = true;
                 }
             }
         };
