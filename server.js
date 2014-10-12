@@ -56,6 +56,26 @@ app.get('/twilioToken', function (req, res) {
   })
 })
 
+app.post('/twiML', function (req, res) {
+    // Our verified twilio phone number
+    var callerId = 'XXXXXXX';
+
+    // Number we're calling
+    var phoneNumber = req.body.PhoneNumber;
+
+    // Create TwiML response
+    var twiml = new twilio.TwimlResponse();
+    twiml.dial({
+            callerId:callerId
+        }, function() {
+            this.number(phoneNumber);
+        });
+
+    // Return the response
+    res.writeHead(200, {'Content-Type': 'text/xml'});
+    res.end(twiml.toString());
+})
+
 var user  = {}
 
 var users = [
