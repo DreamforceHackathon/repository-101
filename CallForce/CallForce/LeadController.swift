@@ -49,7 +49,7 @@ class LeadController : UIViewController, CallViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     var showedLogin : NSString? = NSUserDefaults.standardUserDefaults().objectForKey("showedLogin") as? NSString
-    if showedLogin == nil      //Check for first run of app
+    if showedLogin == "blah"      //Check for first run of app
     {
         let loginStoryBoard = UIStoryboard(name: "LoginController", bundle: nil)
         let loginController = loginStoryBoard.instantiateInitialViewController() as LoginController
