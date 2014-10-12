@@ -140,7 +140,28 @@
 - (NSArray *) createProducts {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     
-    NSDictionary *item = @{@"name": @"Renewal Facial Cream",
+    NSDictionary *item = @{@"name": @"urBeats Earbud Headphones",
+             @"company": @"Beats by Dre",
+             @"description": @"Made To Take A Beating. Designed for music lovers who don't sacrifice sound for style, urBeats deliver pure audio in an ultra-lightweight, colorful package.",
+             @"numLeads": @"453",
+             @"price": @"$150",
+             @"commission": @"5%",
+             @"photoName": @"beats",
+             };
+    [array addObject:item];
+    
+    item = @{@"name": @"Electric Grill",
+                           @"company": @"G. Foreman",
+                           @"description": @"A spacious grill with convenient top mounted temperature control gives you precise and consistent results time after time.",
+                           @"numLeads": @"143",
+                           @"price": @"$200",
+                           @"commission": @"7%",
+                           @"photoName": @"foreman",
+                           };
+    [array addObject:item];
+    
+    
+    item = @{@"name": @"Renewal Facial Cream",
                            @"company": @"Olay",
                            @"description": @"This non-greasy, Oil-free formula has a Beta-Hydroxy Complex that renews dull, dry surface skin while Olay Moisture replenishes skin’s hydration.",
                            @"numLeads": @"973",
