@@ -14,6 +14,12 @@ angular.module('callforce').controller('DetailCtrl',
                 tabService.isActive = false;
                 tabService.isPending = true;
                 $state.go('base.pending');
+                // set the location.hash to the id of
+                // the element you wish to scroll to.
+                $location.hash('top');
+
+                // call $anchorScroll()
+                $anchorScroll();
             };
 
             $scope.acceptRep = function(repId){
@@ -21,6 +27,13 @@ angular.module('callforce').controller('DetailCtrl',
                 tabService.isActive = true;
                 tabService.isPending = false;
                 $state.go('base.active');
+
+                // set the location.hash to the id of
+                // the element you wish to scroll to.
+                $location.hash('top');
+
+                // call $anchorScroll()
+                $anchorScroll();
             };
 
         }]);
