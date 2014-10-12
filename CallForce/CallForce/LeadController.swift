@@ -113,6 +113,7 @@ class LeadController : UIViewController, CallViewDelegate {
       leadCity.text = lead["city"]
       leadCompany.text = lead["company"]
       lastCalled.text = lead["lastContacted"]
+      navigationController?.navigationBar.topItem?.title = lead["otherCompany"]
     } else {
       leadIndex = 0
       setUpView()
