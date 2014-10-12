@@ -68,7 +68,7 @@ describe('products', function () {
   })
 })
 
-describe.only('leads', function () {
+describe('leads', function () {
   it('gets all', function () {
     return flare
       .get('/leads')
