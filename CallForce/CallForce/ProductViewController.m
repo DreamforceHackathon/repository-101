@@ -199,6 +199,13 @@
     self.frontView = self.backView;
     [self addNewProductView:nil];
     
+    if (self.curProductIndex == 4) {
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+        notification.alertBody = @"Congrats! You're been selected by a company to sell!";
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    }
+    
 }
 
 @end

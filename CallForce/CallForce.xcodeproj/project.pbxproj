@@ -20,6 +20,7 @@
 		01F2D66719EA2F330069CE61 /* CallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F2D66619EA2F330069CE61 /* CallView.xib */; };
 		1D080AB419E9CCAF006A45E3 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D080AB219E9CCAF006A45E3 /* ProductViewController.m */; };
 		1D080AB719E9CE52006A45E3 /* ProductViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */; };
+		1D52995719EAFF6E000965A9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D52995619EAFF6E000965A9 /* User.m */; };
 		1D7772F919E9FA6700884E2B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7772F819E9FA6700884E2B /* LoginViewController.m */; };
 		1D7772FC19EA15D800884E2B /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7772FB19EA15D800884E2B /* ProductView.xib */; };
 		1D77730019EA697B00884E2B /* ProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7772FF19EA697B00884E2B /* ProductView.m */; };
@@ -67,6 +68,8 @@
 		1D080AAF19E9CC9D006A45E3 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
 		1D080AB219E9CCAF006A45E3 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 		1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductViewController.storyboard; sourceTree = "<group>"; };
+		1D52995519EAFF5D000965A9 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		1D52995619EAFF6E000965A9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1D7772F819E9FA6700884E2B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		1D7772FA19E9FA8200884E2B /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1D7772FB19EA15D800884E2B /* ProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 		1DD8163019E914C4001DECCC /* CallForce */ = {
 			isa = PBXGroup;
 			children = (
+				1D52995619EAFF6E000965A9 /* User.m */,
+				1D52995519EAFF5D000965A9 /* User.h */,
 				1D77730119EA69A400884E2B /* ProductView.h */,
 				1D7772FF19EA697B00884E2B /* ProductView.m */,
 				01C2B79E19EA321D00EB7716 /* CallView.swift */,
@@ -392,6 +397,7 @@
 				01F2D65B19E9CDAD0069CE61 /* SideMenuController.swift in Sources */,
 				1DD8163A19E914C4001DECCC /* ViewController.m in Sources */,
 				01F2D65519E9C2740069CE61 /* LoginController.swift in Sources */,
+				1D52995719EAFF6E000965A9 /* User.m in Sources */,
 				1D7772F919E9FA6700884E2B /* LoginViewController.m in Sources */,
 				01F2D65919E9C30C0069CE61 /* GradientView.swift in Sources */,
 				1D77730019EA697B00884E2B /* ProductView.m in Sources */,

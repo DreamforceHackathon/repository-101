@@ -12,6 +12,7 @@
 #import "AFHTTPRequestOperation.h"
 #import "LIALinkedInHttpClient.h"
 #import "LIALinkedInApplication.h"
+#import "ProductViewController.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet GradientView *gradientView;
@@ -33,6 +34,7 @@ LIALinkedInHttpClient *_client;
 }
 
 - (IBAction)loginButtonTapped:(id)sender {
+    /*
     [self.client getAuthorizationCode:^(NSString *code) {
         [self.client getAccessToken:code success:^(NSDictionary *accessTokenData) {
             NSString *accessToken = [accessTokenData objectForKey:@"access_token"];
@@ -44,10 +46,14 @@ LIALinkedInHttpClient *_client;
         NSLog(@"Authorization was cancelled by user");
     }                     failure:^(NSError *error) {
         NSLog(@"Authorization failed %@", error);
+        
     }];
-  
-  [[self presentedViewController] dismissViewControllerAnimated:false completion:nil];
-
+     */
+    UIStoryboard *productStoryboard = [UIStoryboard storyboardWithName:@"ProductViewController" bundle:nil];
+    ProductViewController *pvc = [productStoryboard instantiateInitialViewController];
+    
+    [[self revealViewController] pushFrontViewController:pvc animated:YES];
+    
 }
 
 

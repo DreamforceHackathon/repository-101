@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "CallForce-Swift.h"
 #import "SWRevealViewController.h"
+#import "User.h"
 
 @interface AppDelegate ()
 
@@ -21,17 +22,28 @@
   
   UIStoryboard *sideMenuStoryboard = [UIStoryboard storyboardWithName:@"SideMenuController" bundle:nil];
   SideMenuController *sideMenuController = [sideMenuStoryboard instantiateInitialViewController];
-  
+    
   UIStoryboard *leadStoryboard = [UIStoryboard storyboardWithName:@"LeadController" bundle:nil];
   UINavigationController *leadController = [leadStoryboard instantiateInitialViewController];
   
+    User *user = [User sharedInstance];
+    
+    if (!user.showedLogin) {
+        leadStoryboard = [UIStoryboard storyboardWithName:@"LoginController" bundle:nil];
+        leadController = [leadStoryboard instantiateInitialViewController];
+
+        
+        user.showedLogin = true;
+        
+    }
+    
   sideMenuController.leadController = leadController;
   
   SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:sideMenuController frontViewController:leadController];
   
   self.window.rootViewController = revealController;
   [self.window makeKeyAndVisible];
-  
+  [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
 
   return YES;
 }

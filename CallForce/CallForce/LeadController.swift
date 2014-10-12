@@ -14,6 +14,7 @@ class LeadController : UIViewController, CallViewDelegate {
   @IBOutlet weak var leadCompany: UILabel!
   @IBOutlet weak var lastCalled: UILabel!
   var phone:Phone!;
+    var timer:NSTimer!;
 
   @IBAction func callButtonPressed(sender: AnyObject) {
     infoBottomView.hidden = true
@@ -30,10 +31,14 @@ class LeadController : UIViewController, CallViewDelegate {
     MRProgressOverlayView.showOverlayAddedTo(self.view, title: "Dialing...", mode: MRProgressOverlayViewMode.Indeterminate, animated: true)
 
 
-    var timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("dismissHUD"), userInfo: nil, repeats: false)
+    self.timer = NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("dismissHUD"), userInfo: nil, repeats: true)
     
-    timer.fire()
-
+    if (leadIndex == 1) {
+        var localNotification:UILocalNotification = UILocalNotification()
+        localNotification.alertBody = "Congrats! Your lead has been closed! You juoost earned $15.35!"
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        }
   }
   
   
@@ -135,6 +140,7 @@ class LeadController : UIViewController, CallViewDelegate {
     
     func dismissHUD() {
         MRProgressOverlayView.dismissOverlayForView(self.view, animated: true)
+        self.timer.invalidate()
     }
     
     func showSuccess() {
