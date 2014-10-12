@@ -11,7 +11,13 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
     // Define states
     $stateProvider
         .state('base', { // Foundation for all routes
-            abstract: true
+            abstract: true,
+            resolve: {
+                repService: 'repService',
+                reps: function(repService){
+                    return repService.getReps();
+                }
+            }
         })
         .state('base.pending', {
             url: '/pending',
