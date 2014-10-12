@@ -25,7 +25,10 @@
   UIStoryboard *leadStoryboard = [UIStoryboard storyboardWithName:@"LeadController" bundle:nil];
   UINavigationController *leadController = [leadStoryboard instantiateInitialViewController];
   
+  sideMenuController.leadController = leadController;
+  
   SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:sideMenuController frontViewController:leadController];
+  
   
   
   self.window.rootViewController = revealController;

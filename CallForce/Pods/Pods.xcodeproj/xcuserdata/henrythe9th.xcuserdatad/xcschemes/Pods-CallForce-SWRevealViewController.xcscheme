@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2B1EEC804EE04D58A4DA8035"
+               BlueprintIdentifier = "97728DED88DF4CD4AD3AD5CD"
                BuildableName = "libPods-CallForce-SWRevealViewController.a"
                BlueprintName = "Pods-CallForce-SWRevealViewController"
                ReferencedContainer = "container:Pods.xcodeproj">

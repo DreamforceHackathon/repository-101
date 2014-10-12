@@ -24,7 +24,7 @@
                 NSString* capabilityToken =
                 [[NSString alloc] initWithData:data
                                        encoding:NSUTF8StringEncoding];
-                capabilityToken = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6InNjb3BlOmNsaWVudDppbmNvbWluZz9jbGllbnROYW1lPWNhbGxGb3JjZSBzY29wZTpjbGllbnQ6b3V0Z29pbmc_YXBwU2lkPUFQNTJmMWJjOTIyMDk0N2FhNTZmNmY1ZDQ0NDVlMmVjYjYmY2xpZW50TmFtZT1jYWxsRm9yY2UiLCJpc3MiOiJBQ2NmMmNhY2Y3ODU5NGE0NmM3MDYyNDk5N2JlZmViMjVhIiwiZXhwIjoxNDEzMDYwOTI4fQ.zKj1c_CrGv9PtTe1ikERd0ZKBycGPBU0b1J9CJ0BVvM";
+                capabilityToken = @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZSI6InNjb3BlOmNsaWVudDppbmNvbWluZz9jbGllbnROYW1lPWNhbGxGb3JjZSBzY29wZTpjbGllbnQ6b3V0Z29pbmc_YXBwU2lkPSZjbGllbnROYW1lPWNhbGxGb3JjZSIsImlzcyI6IkFDY2YyY2FjZjc4NTk0YTQ2YzcwNjI0OTk3YmVmZWIyNWEiLCJleHAiOjE0MTMxMjI0Njh9.Wgy53-g1JWbNhJWvaRIqjaodjgXKzYRReDOtARCYe6g";
                 
                 _device = [[TCDevice alloc] initWithCapabilityToken:capabilityToken
                                                            delegate:nil];

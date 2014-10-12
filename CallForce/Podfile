@@ -6,7 +6,8 @@ target "CallForce" do
 pod "MDCSwipeToChoose"
 pod "AFNetworking", "~> 2.0"
 pod "SWRevealViewController"
-pod "IOSLinkedInAPI
+pod "IOSLinkedInAPI"
+pod "MRProgress"
 
 end
 

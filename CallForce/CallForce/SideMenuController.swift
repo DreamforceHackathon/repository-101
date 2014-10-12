@@ -10,6 +10,8 @@ class SideMenuController : UIViewController, UITableViewDataSource, UITableViewD
   let cellIdentifier = "Navigation"
   let navigation = ["Call": "icon-nav-phone", "Explore": "icon-nav-basket", "Profile": "icon-nav-person"]
   
+  var leadController:UINavigationController!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     

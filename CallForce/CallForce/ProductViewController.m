@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
     self.products = [self createProducts];
-    self.curProductIndex = 0;
+    self.curProductIndex = -1;
     
     self.frontView = [[[NSBundle mainBundle] loadNibNamed:@"ProductView" owner:self options:nil] firstObject];
     // Do any additional setup after loading the view, typically from a nib.

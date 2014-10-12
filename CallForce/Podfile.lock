@@ -23,18 +23,48 @@ PODS:
   - IOSLinkedInAPI (2.0.0):
     - AFNetworking (>= 2.0.0)
   - MDCSwipeToChoose (0.2.1)
+  - MRProgress (0.7.0):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Icons
+    - MRProgress/NavigationBarProgress
+    - MRProgress/Overlay
+  - MRProgress/ActivityIndicator (0.7.0):
+    - MRProgress/Stopable
+  - MRProgress/Blur (0.7.0):
+    - MRProgress/Helper
+  - MRProgress/Circular (0.7.0):
+    - MRProgress/Helper
+    - MRProgress/ProgressBaseClass
+    - MRProgress/Stopable
+  - MRProgress/Helper (0.7.0)
+  - MRProgress/Icons (0.7.0)
+  - MRProgress/NavigationBarProgress (0.7.0):
+    - MRProgress/ProgressBaseClass
+  - MRProgress/Overlay (0.7.0):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Helper
+    - MRProgress/Icons
+  - MRProgress/ProgressBaseClass (0.7.0)
+  - MRProgress/Stopable (0.7.0):
+    - MRProgress/Helper
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - IOSLinkedInAPI
   - MDCSwipeToChoose
+  - MRProgress
   - SWRevealViewController
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   IOSLinkedInAPI: 5b400668a260a3594af94e363ade95933ce22db8
   MDCSwipeToChoose: 54f7b1675eff182cdc46c582360c7fca4c766a67
+  MRProgress: 5abb19ba97ad22c321c37f3d299e32391109b1d6
   SWRevealViewController: f6d80638b8e12323e87ac79562345403a799cb77
 
 COCOAPODS: 0.33.1
