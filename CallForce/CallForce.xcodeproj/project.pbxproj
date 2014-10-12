@@ -18,6 +18,7 @@
 		1D080AB419E9CCAF006A45E3 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D080AB219E9CCAF006A45E3 /* ProductViewController.m */; };
 		1D080AB719E9CE52006A45E3 /* ProductViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */; };
 		1D7772F919E9FA6700884E2B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7772F819E9FA6700884E2B /* LoginViewController.m */; };
+		1D7772FC19EA15D800884E2B /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7772FB19EA15D800884E2B /* ProductView.xib */; };
 		1DD8163419E914C4001DECCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163319E914C4001DECCC /* main.m */; };
 		1DD8163719E914C4001DECCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163619E914C4001DECCC /* AppDelegate.m */; };
 		1DD8163A19E914C4001DECCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD8163919E914C4001DECCC /* ViewController.m */; };
@@ -61,6 +62,7 @@
 		1D080AB619E9CE52006A45E3 /* ProductViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductViewController.storyboard; sourceTree = "<group>"; };
 		1D7772F819E9FA6700884E2B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		1D7772FA19E9FA8200884E2B /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		1D7772FB19EA15D800884E2B /* ProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
 		1DD8162E19E914C4001DECCC /* CallForce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallForce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DD8163219E914C4001DECCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DD8163319E914C4001DECCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		1DD8163019E914C4001DECCC /* CallForce */ = {
 			isa = PBXGroup;
 			children = (
+				1D7772FB19EA15D800884E2B /* ProductView.xib */,
 				1D7772F819E9FA6700884E2B /* LoginViewController.m */,
 				1D7772FA19E9FA8200884E2B /* LoginViewController.h */,
 				1D080AB219E9CCAF006A45E3 /* ProductViewController.m */,
@@ -315,6 +318,7 @@
 				1D080AB719E9CE52006A45E3 /* ProductViewController.storyboard in Resources */,
 				01F2D65D19E9CDB70069CE61 /* SideMenuController.storyboard in Resources */,
 				1DD8164219E914C4001DECCC /* LaunchScreen.xib in Resources */,
+				1D7772FC19EA15D800884E2B /* ProductView.xib in Resources */,
 				01F2D65719E9C2BD0069CE61 /* LoginController.storyboard in Resources */,
 				01F2D66319E9DE770069CE61 /* LeadController.storyboard in Resources */,
 				1DD8163F19E914C4001DECCC /* Images.xcassets in Resources */,
