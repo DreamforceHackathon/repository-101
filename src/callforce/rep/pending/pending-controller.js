@@ -12,6 +12,18 @@ angular.module('callforce').controller('PendingCtrl',
             var myDiv = document.getElementById('page-content');
             myDiv.scrollTop = 0;
 
+            $scope.anymorePendingReps = function(){
+                for (var i = 0; i < repService.reps.length; i++){
+                    if (repService.reps[i].pending && repService.reps[i].invisible == null){
+                        console.log(true);
+                        return true;
+                    }
+                }
+                console.log(false);
+
+                return false;
+            };
+
             $scope.reps = repService.getPendingReps();
 
             $scope.showDetail = function(repId){

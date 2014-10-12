@@ -61,4 +61,14 @@ angular.module('callforce').service('repService', ['$http',
             }
         }
 
+        self.getMaxPendingRepId = function(){
+            var maxId = 0;
+            for (var i = 0; i < self.reps.length; i++){
+                if (self.reps[i].id > maxId && self.reps[i].pending){
+                    maxId = self.reps[i].id;
+                }
+            }
+            return maxId;
+        }
+
     }]);

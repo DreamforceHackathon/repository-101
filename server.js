@@ -149,7 +149,7 @@ var users = [
     age: 29,
     email: 'JasonM@gmail.com',
     phone: '(512) 267-1931',
-    pending: false
+    pending: true
 },
 
 {

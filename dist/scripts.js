@@ -43925,22 +43925,38 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
         '$anchorScroll',
         function ($scope, $stateParams, repService, $state, tabService, $location, $anchorScroll) {
 
+
+            var myDiv = document.getElementById('page-content');
+            myDiv.scrollTop = 0;
+
             $scope.rep = repService.getRep($stateParams.repId);
 
             $scope.rejectRep = function(repId){
                 repService.rejectRep(repId);
-                tabService.isActive = false;
-                tabService.isPending = true;
-                $state.go('base.pending');
+
+                if (repId+1 > repService.getMaxPendingRepId()){
+                    $state.go('base.pending');
+                } else {
+                    $state.go('base.detail',
+                        {
+                            repId: repId+1
+                        });
+                }
 
             };
 
             $scope.acceptRep = function(repId){
                 repService.acceptRep(repId);
-                tabService.isActive = true;
-                tabService.isPending = false;
-                $state.go('base.active');
 
+
+                if (repId+1 > repService.getMaxPendingRepId()){
+                    $state.go('base.pending');
+                } else {
+                    $state.go('base.detail',
+                        {
+                            repId: repId+1
+                        });
+                }
 
             };
 
@@ -43957,6 +43973,18 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
 
             var myDiv = document.getElementById('page-content');
             myDiv.scrollTop = 0;
+
+            $scope.anymorePendingReps = function(){
+                for (var i = 0; i < repService.reps.length; i++){
+                    if (repService.reps[i].pending && repService.reps[i].invisible == null){
+                        console.log(true);
+                        return true;
+                    }
+                }
+                console.log(false);
+
+                return false;
+            };
 
             $scope.reps = repService.getPendingReps();
 
@@ -44028,6 +44056,16 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
                     return self.reps[i];
                 }
             }
+        }
+
+        self.getMaxPendingRepId = function(){
+            var maxId = 0;
+            for (var i = 0; i < self.reps.length; i++){
+                if (self.reps[i].id > maxId && self.reps[i].pending){
+                    maxId = self.reps[i].id;
+                }
+            }
+            return maxId;
         }
 
     }]);;angular.module('callforce').controller('TabCtrl',
