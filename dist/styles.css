@@ -695,8 +695,8 @@ input[type="button"] {
   margin: 10px;
   overflow: hidden;
   background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  /*border: 1px solid #ddd;*/
+  /*border-radius: 6px;*/
 }
 
 .card .table-view {
@@ -760,7 +760,7 @@ input[type="button"] {
   margin-left: 0;
   font-weight: 500;
   color: #999;
-  background-color: #fafafa;
+  background-color: rgb(228, 228, 228);
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
@@ -947,10 +947,10 @@ select {
   border-left-width: 0;
 }
 .segmented-control .control-item:active {
-  /*background-color: #eee;*/
+  background-color: #eee;
 }
 .segmented-control .control-item.active {
-  /*background-color: #ccc;*/
+  background-color: #ccc;
 }
 
 .segmented-control-primary {
@@ -3104,4 +3104,6 @@ select {
 .fa-meanpath:before {
   content: "\f20c";
 }
-
+.content{
+    background-color: rgb(228, 228, 228);
+}
