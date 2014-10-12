@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZTM-fm-NZ9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Cj5-qp-1Gs">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Product View Controller-->
+        <!--Call Force-->
         <scene sceneID="095-A8-L6i">
             <objects>
                 <viewController id="ZTM-fm-NZ9" customClass="ProductViewController" sceneMemberID="viewController">
@@ -13,45 +13,123 @@
                         <viewControllerLayoutGuide type="bottom" id="R0j-SA-Zas"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vkP-du-cpo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uCS-ie-AgF">
-                                <rect key="frame" x="-5" y="-20" width="332" height="273"/>
+                                <rect key="frame" x="-6" y="62" width="332" height="235"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Sell the knives in the industry. These knives will cut through anything including your hand and a giant watermelon." translatesAutoresizingMaskIntoConstraints="NO" id="Dau-X6-3Rd">
-                                <rect key="frame" x="7" y="305" width="297" height="128"/>
+                                <rect key="frame" x="16" y="336" width="288" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cutlery" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fl-fR-D6K">
-                                <rect key="frame" x="16" y="273" width="55" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="305" width="56" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cutco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqK-b5-Oq8">
-                                <rect key="frame" x="244" y="273" width="47" height="21"/>
+                                <rect key="frame" x="233" y="305" width="47" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-building" translatesAutoresizingMaskIntoConstraints="NO" id="dT6-Gk-EbM">
+                                <rect key="frame" x="290" y="307" width="15" height="15"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-phone" translatesAutoresizingMaskIntoConstraints="NO" id="WQb-ll-0H3">
+                                <rect key="frame" x="85" y="430" width="15" height="15"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-cart" translatesAutoresizingMaskIntoConstraints="NO" id="fL2-mL-q6e">
+                                <rect key="frame" x="149" y="430" width="15" height="15"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-dollar" translatesAutoresizingMaskIntoConstraints="NO" id="Q57-cv-Ofa">
+                                <rect key="frame" x="213" y="430" width="15" height="15"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="500+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uC-or-rW8">
+                                <rect key="frame" x="62" y="459" width="60" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgn-Jg-6Tf">
+                                <rect key="frame" x="126" y="459" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WX-f6-UbI">
+                                <rect key="frame" x="190" y="458" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koM-VI-OFw">
+                                <rect key="frame" x="30" y="493" width="121" height="45"/>
+                                <state key="normal" title="Pass" backgroundImage="button-pass">
+                                    <color key="titleColor" red="0.93209385871887207" green="0.59352695941925049" blue="0.63183176517486572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8E-P2-XaO">
+                                <rect key="frame" x="169" y="493" width="121" height="45"/>
+                                <state key="normal" title="Pass" backgroundImage="button-sell">
+                                    <color key="titleColor" red="0.27622488141059875" green="0.75228524208068848" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Call Force" id="iEm-BS-rTF">
+                        <barButtonItem key="leftBarButtonItem" image="icon-menu" id="e6T-xI-QJg">
+                            <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="companyNameLabel" destination="oqK-b5-Oq8" id="4AL-t4-Bfw"/>
                         <outlet property="imageView" destination="uCS-ie-AgF" id="BAb-D3-bJH"/>
+                        <outlet property="menuButton" destination="e6T-xI-QJg" id="XX5-34-79r"/>
                         <outlet property="productNameLabel" destination="6Fl-fR-D6K" id="rsc-8e-C1T"/>
                         <outlet property="summaryText" destination="Dau-X6-3Rd" id="lk0-ov-E4J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhR-gw-qqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="699" y="304"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GuK-VC-88d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cj5-qp-1Gs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Lte-mj-N7C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2369665801525116" green="0.64436078071594238" blue="0.9724995493888855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZTM-fm-NZ9" kind="relationship" relationship="rootViewController" id="hQh-A6-2aw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5f6-Tg-b8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="167" y="304"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button-pass" width="121" height="45"/>
+        <image name="button-sell" width="120" height="45"/>
+        <image name="icon-building" width="15" height="15"/>
+        <image name="icon-cart" width="15" height="15"/>
+        <image name="icon-dollar" width="18" height="18"/>
+        <image name="icon-menu" width="24" height="16"/>
+        <image name="icon-phone" width="15" height="15"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

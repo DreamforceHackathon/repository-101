@@ -8,17 +8,19 @@
 
 #import "ProductViewController.h"
 #import <MDCSwipeToChoose/MDCSwipeToChoose.h>
+#import "SWRevealViewController.h"
 #import "Phone.h"
+
 
 @interface ProductViewController () <MDCSwipeToChooseDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *summaryText;
 @property (weak, nonatomic) IBOutlet UILabel *productNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *companyNameLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 @property NSArray *products;
 @property UIView *frontView;
 @property UIView *backView;
-
 @end
 
 @implementation ProductViewController
@@ -31,7 +33,12 @@
     // You can customize MDCSwipeToChooseView using MDCSwipeToChooseViewOptions.
     MDCSwipeOptions *options = [MDCSwipeOptions new];
     options.delegate = self;
-    
+  
+  self.menuButton.target = self.revealViewController;
+  self.menuButton.action = @selector(revealToggle:);
+  
+  [self.view addGestureRecognizer:(self.revealViewController.panGestureRecognizer)];
+  
     /*
     options.onPan = ^(MDCPanState *state){
         if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft) {

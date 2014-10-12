@@ -36,14 +36,12 @@ class SideMenuController : UIViewController, UITableViewDataSource, UITableViewD
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier, forIndexPath: indexPath) as NavigationTableViewCell
     let key = Array(navigation.keys)[indexPath.row]
+    println("\(key)")
     let icon = navigation[key]!
     
     cell.navLabel?.text = key
     cell.navImageView.image = UIImage(named: icon)
     
-//    if key == "Menu" {
-//      activeIndexPath = indexPath
-//    }
     
     return cell
   }
@@ -53,24 +51,25 @@ class SideMenuController : UIViewController, UITableViewDataSource, UITableViewD
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
     var newFrontController:UIViewController
     let selectedNav:String = Array(navigation.keys)[indexPath.row]
-//    activeCellDidChange(indexPath)
     
-//    switch selectedNav {
-//    case "Menu":
-//      newFrontController = homeController
-//    case "Account":
-//      let storyboard = UIStoryboard(name: "AccountController", bundle: nil)
-//      newFrontController = storyboard.instantiateInitialViewController() as UINavigationController
-//      
-//    case "Service Areas":
-//      
-//      let storyboard = UIStoryboard(name: "ServiceAreasController", bundle: nil)
-//      newFrontController = storyboard.instantiateInitialViewController() as UINavigationController
-//      
-//    default:
-//      newFrontController = homeController
-//    }
-//    self.revealViewController().pushFrontViewController(newFrontController, animated: true)
+    switch selectedNav {
+    case "Call":
+      let storyboard = UIStoryboard(name: "LeadController", bundle: nil)
+      newFrontController = storyboard.instantiateInitialViewController() as UINavigationController
+      
+    case "Explore":
+      let storyboard = UIStoryboard(name: "ProductViewController", bundle: nil)
+      newFrontController = storyboard.instantiateInitialViewController() as UINavigationController
+      
+    case "Profile":
+      let storyboard = UIStoryboard(name: "ProfileController", bundle: nil)
+      newFrontController = storyboard.instantiateInitialViewController() as UINavigationController
+      
+    default:
+      let storyboard = UIStoryboard(name: "LeadController", bundle: nil)
+      newFrontController = storyboard.instantiateInitialViewController() as UINavigationController
+    }
+    self.revealViewController().pushFrontViewController(newFrontController, animated: true)
     
   }
 
