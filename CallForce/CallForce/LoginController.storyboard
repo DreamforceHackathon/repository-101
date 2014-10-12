@@ -32,7 +32,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginButtonTapped:" destination="UIL-EW-GOl" eventType="touchUpInside" id="C1v-CI-KnE"/>
+                                            <action selector="loginButtonTapped:" destination="UIL-EW-GOl" eventType="touchUpInside" id="U1h-uy-JUp"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distributed Sales Network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsL-op-V9m">
@@ -54,7 +54,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="gradientView" destination="fxE-X2-GSR" id="NvF-uN-bGN"/>
+                        <outlet property="gradientView" destination="fxE-X2-GSR" id="KzZ-a9-1ih"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8T6-8x-bnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
