@@ -61,6 +61,7 @@ angular.module('callforce').service('repService', ['$http',
             }
         }
 
+        // TODO this should be just get next repId if null none exist
         self.getMaxPendingRepId = function(){
             var maxId = 0;
             for (var i = 0; i < self.reps.length; i++){

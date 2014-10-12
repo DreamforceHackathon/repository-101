@@ -83,7 +83,7 @@ var users = [
 {
     id: 1,
         name: 'Jackson Palatso',
-    summary: 'Proven outbound B2C sales experience with a passion for meeting new people and gaining new experiences.',
+    summary: '2 years of outbound B2C sales experience in vacuum cleaners. Exceeded sales quota 21 of 24 months.',
     work_experience: '2 year experience in inside sales carrying and exceeding my quota. Currently traveling the US!',
     education: 'Bentley College',
     number_of_closes: 23,
@@ -101,7 +101,7 @@ var users = [
 {
     id: 2,
         name: 'Maryann Thomas',
-    summary: 'Energetic economics student looking to make extra cash via outbound sales to help pay for tuition!',
+    summary: 'Energetic economics student looking to make extra cash by outbound sales to help pay tuition! Currently president of Kappa Kappa Gamma. Looking to expand upon my retail sales experience!',
     work_experience: 'Currently the president of Kappa Kappa Gamma and the Chess club. Looking to expand upon my retail sales experience!',
     education: 'Vanderbilt University',
     number_of_closes: 4,
@@ -119,7 +119,7 @@ var users = [
 {
     id: 3,
         name: 'Jack Mandelbom',
-    summary: 'Seasoned sales professional with 25 years experience building and training outbound sales teams across 4 companies!',
+    summary: 'Career salesman who spent 25 years building and training outbound sales teams across 4 companies! 5x President Club winner. Adviser to the CallForce team and active product user!',
     work_experience: 'Led 4 sales organizations. Exceeded sales quota for 21 of 25 years, Achieved presidents club 5 times. Excited to advise the CallForce team and use the product myself!',
     education: 'Dartmouth College',
     number_of_closes: 21,
@@ -137,7 +137,7 @@ var users = [
 {
     id: 4,
         name: 'Jason Mok',
-    summary: 'Experienced b2b salesman with 5 years experience selling broadband cable products to enterprise accounts.',
+    summary: 'Spent the last 5 years selling broadband cable products to enterprise accounts. Now working full time for CallForce. Love the flexibility to sell multiple products on my schedule!',
     work_experience: 'Was recently laid off and am now working full time for CallForce. Love the flexibility to sell multiple products on my schedule! Hire me and you won’t be disappointed.',
     education: 'UCLA',
     number_of_closes: 99,
@@ -155,7 +155,7 @@ var users = [
 {
     id: 5,
         name: 'Meghan Taylor',
-    summary: 'Experienced automobile sales professional at GM. Consistently exceeded sales quota and set the monthly sales record for Detroit’s Chevy dealership!',
+    summary: 'Previously sold automobiles for GM. Set the (still standing) monthly sales record for Detroit’s Chevy dealership! Recently laid off by GM. Now working part-time in auto sales saving the planet one EV at a time!',
     work_experience: 'Was recently laid off by GM. Now working part-time in auto sales for helping to save the planet one EV at a time!',
     education: 'UCLA',
     number_of_closes: 14,
