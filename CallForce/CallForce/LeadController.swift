@@ -48,19 +48,6 @@ class LeadController : UIViewController, CallViewDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    var showedLogin : NSString? = NSUserDefaults.standardUserDefaults().objectForKey("showedLogin") as? NSString
-    if showedLogin == "blah"      //Check for first run of app
-    {
-        let loginStoryBoard = UIStoryboard(name: "LoginController", bundle: nil)
-        let loginController = loginStoryBoard.instantiateInitialViewController() as LoginController
-        self.presentViewController(loginController, animated: true, completion: nil)
-        
-        NSUserDefaults.standardUserDefaults().setObject("true", forKey: "showedLogin")
-        NSUserDefaults.standardUserDefaults().synchronize()
-    }
-    
-    println(showedLogin)
-    
     menuButton.target = self.revealViewController()
     menuButton.action = Selector("revealToggle:")
     

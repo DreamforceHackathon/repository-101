@@ -45,6 +45,9 @@ LIALinkedInHttpClient *_client;
     }                     failure:^(NSError *error) {
         NSLog(@"Authorization failed %@", error);
     }];
+  
+  [[self presentedViewController] dismissViewControllerAnimated:false completion:nil];
+
 }
 
 

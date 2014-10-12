@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01C2B79F19EA321D00EB7716 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2B79E19EA321D00EB7716 /* CallView.swift */; };
+		01C3083B19EAF123005F865C /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C3083A19EAF123005F865C /* CurrentUser.swift */; };
 		01F2D65519E9C2740069CE61 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65419E9C2740069CE61 /* LoginController.swift */; };
 		01F2D65719E9C2BD0069CE61 /* LoginController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F2D65619E9C2BD0069CE61 /* LoginController.storyboard */; };
 		01F2D65919E9C30C0069CE61 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2D65819E9C30C0069CE61 /* GradientView.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		01C2B79E19EA321D00EB7716 /* CallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
+		01C3083A19EAF123005F865C /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		01F2D65319E9C2740069CE61 /* CallForce-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallForce-Bridging-Header.h"; sourceTree = "<group>"; };
 		01F2D65419E9C2740069CE61 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		01F2D65619E9C2BD0069CE61 /* LoginController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginController.storyboard; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				01F2D65419E9C2740069CE61 /* LoginController.swift */,
 				01F2D65A19E9CDAD0069CE61 /* SideMenuController.swift */,
 				01F2D65E19E9DAAD0069CE61 /* NavigationTableViewCell.swift */,
+				01C3083A19EAF123005F865C /* CurrentUser.swift */,
 				01F2D65C19E9CDB70069CE61 /* SideMenuController.storyboard */,
 				01F2D65619E9C2BD0069CE61 /* LoginController.storyboard */,
 				1DD8163B19E914C4001DECCC /* Main.storyboard */,
@@ -396,6 +399,7 @@
 				1DD8163719E914C4001DECCC /* AppDelegate.m in Sources */,
 				1DD8163419E914C4001DECCC /* main.m in Sources */,
 				1D080AB419E9CCAF006A45E3 /* ProductViewController.m in Sources */,
+				01C3083B19EAF123005F865C /* CurrentUser.swift in Sources */,
 				01F2D65F19E9DAAD0069CE61 /* NavigationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

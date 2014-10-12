@@ -29,8 +29,6 @@
   
   SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:sideMenuController frontViewController:leadController];
   
-  
-  
   self.window.rootViewController = revealController;
   [self.window makeKeyAndVisible];
   

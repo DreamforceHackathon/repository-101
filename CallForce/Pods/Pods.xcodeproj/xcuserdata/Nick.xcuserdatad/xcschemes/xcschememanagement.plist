@@ -4,10 +4,30 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-CallForce-AFNetworking.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-CallForce-IOSLinkedInAPI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Pods-CallForce-MDCSwipeToChoose.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>Pods-CallForce-MRProgress.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Pods-CallForce-SWRevealViewController.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Pods-CallForce.xcscheme</key>
 		<dict>
@@ -42,12 +62,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>348C8197D6BD4176AE296B05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>533C0282EE224ED99C306B4A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>812FF440301C485BA6760812</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>97728DED88DF4CD4AD3AD5CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A412B3EDC623422A9AA7EE69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B005528F4FFD4A4D80BAE9D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C2895F401031404D8377C93F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EF097578F6A645DABBCC455D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6187F367C49421CA71761B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
