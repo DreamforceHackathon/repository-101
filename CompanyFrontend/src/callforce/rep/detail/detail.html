@@ -1,7 +1,7 @@
 <div class="card">
     <ul class="table-view">
         <li class="table-view-cell">
-                <img class="media-object pull-left" src="http://placehold.it/42x42">
+                <img class="media-object pull-left" ng-src="{{ rep.photo_url }}">
                 <div class="media-body">
                     {{ rep.name }}
                     <p>
@@ -98,10 +98,14 @@
         <li class="table-view-cell table-view-divider"></li>
         <li style="background-color: #5cb85c;">
 
-            <button class="btn-negative btn-block" style="display: inline; width:49%;margin-bottom: 0">
+            <button class="btn-negative btn-block"
+                    ng-click="rejectRep(rep.id)"
+                    style="display: inline; width:49%;margin-bottom: 0">
                 Reject
             </button>
-            <button class="btn-positive btn-block" style="display:inline; width:49%;margin-bottom: 0;">
+            <button class="btn-positive btn-block"
+                    ng-click="acceptRep(rep.id)"
+                    style="display:inline; width:49%;margin-bottom: 0;">
                 Accept
             </button>
 
