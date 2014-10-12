@@ -18,7 +18,7 @@ var oauth = null
 var org = nforce.createConnection({
   clientId: '3MVG9xOCXq4ID1uHhtUqMuHpGog1YjljbHSCw0abr583NjRe_Wcz5BLxk4m.QTQpLGmbWXDxm6FrJtfFHlN2L',
   clientSecret: '97071771698148849',
-  redirectUri: 'http://localhost:3000/oauth/_callback',
+  redirectUri: 'http://callforce.herokuapp.com:3000/oauth/_callback',
   apiVersion: 'v27.0',  // optional, defaults to current salesforce API version
   environment: 'production',  // optional, salesforce 'sandbox' or 'production', production default
   mode: 'multi', // optional, 'single' or 'multi' user mode, multi default
