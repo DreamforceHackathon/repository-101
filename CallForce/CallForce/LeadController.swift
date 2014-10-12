@@ -10,20 +10,29 @@ class LeadController : UIViewController, CallViewDelegate {
   @IBOutlet weak var leadImageView: UIImageView!
   @IBOutlet weak var bottomView: UIView!
   @IBOutlet weak var infoBottomView: UIView!
+  @IBOutlet weak var leadCity: UILabel!
+  @IBOutlet weak var leadCompany: UILabel!
+  @IBOutlet weak var lastCalled: UILabel!
 
   @IBAction func callButtonPressed(sender: AnyObject) {
     infoBottomView.hidden = true
-    let callView = NSBundle.mainBundle().loadNibNamed("CallView", owner: self, options: nil).first as? CallView
-    callView?.delegate = self
+    globalCallView = NSBundle.mainBundle().loadNibNamed("CallView", owner: self, options: nil).first as? CallView
+    globalCallView?.delegate = self
     
-    callView?.notesField.layer.borderColor = UIColor.grayColor().CGColor
-    callView?.notesField.layer.borderWidth = 1.0
-
-    callView?.bounds.size.width = 320
-
+    globalCallView?.notesField.layer.borderColor = UIColor.lightGrayColor().CGColor
+    globalCallView?.notesField.layer.borderWidth = 1.0
     
-    bottomView.addSubview(callView!) 
+    bottomView.addSubview(globalCallView!)
   }
+  
+  
+  
+  var globalCallView:CallView?
+
+  let url = ""
+  var leads:[[String:String]]!
+  var leadIndex = 0
+    
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -43,9 +52,14 @@ class LeadController : UIViewController, CallViewDelegate {
 
     leadImageView.layer.cornerRadius = leadImageView.frame.size.width / 2
     leadImageView.clipsToBounds = true
+    
+    leads = getData()
+    
+    setUpView()
   }
   
   func closedButtonPressed(sender: AnyObject) {
+    
   //    change color of button
   }
   
@@ -54,6 +68,54 @@ class LeadController : UIViewController, CallViewDelegate {
   }
   
   func endCallButtonPressed(callView: CallView, sender: AnyObject) {
-  // Load normal view with next LEAD
+    globalCallView?.hidden = true
+    infoBottomView.hidden = false
+    
+    leadIndex += 1
+    setUpView()
+  }
+  
+ 
+  
+  func getData() -> [[String:String]]{
+    var data = [
+      [ "name": "John Smith",
+        "company" : "Google",
+        "city": "San Francisco",
+        "lastContacted": "4 days ago",
+        "photoUrl" : "www.example.com",
+        "otherCompany" : "Tesla",
+        "price" : "$60,0000",
+        "productName" : "Model S"
+
+      ],
+      [ "name": "George Fool",
+        "company" : "Yahoo",
+        "city" : "San Mateo",
+        "lastContacted" : "Never",
+        "photoUrl" : "www.example.comn",
+        "otherCompany" : "Apple",
+        "price" : "$1,000",
+        "productName" : "iWatch"
+      ]
+
+    ]
+    
+    return data
+  }
+  
+  func setUpView() {
+    if leadIndex < leads.count {
+      let lead = leads[leadIndex]
+      leadName.text = lead["name"]
+      productName.text = lead["productName"]
+      productPrice.text = lead["price"]
+      leadCity.text = lead["city"]
+      leadCompany.text = lead["company"]
+      lastCalled.text = lead["lastContacted"]
+    } else {
+      leadIndex = 0
+      setUpView()
+    }
   }
 }

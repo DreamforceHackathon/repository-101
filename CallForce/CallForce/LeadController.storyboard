@@ -133,6 +133,9 @@
                     <connections>
                         <outlet property="bottomView" destination="xEb-aR-uug" id="aZW-BD-yBF"/>
                         <outlet property="infoBottomView" destination="sVR-kJ-anT" id="SMv-jD-nqT"/>
+                        <outlet property="lastCalled" destination="1wG-e2-fXD" id="M3O-b2-YrN"/>
+                        <outlet property="leadCity" destination="DSG-gL-Rbk" id="rrn-3L-EoA"/>
+                        <outlet property="leadCompany" destination="g3w-t0-Btc" id="hho-TZ-cAe"/>
                         <outlet property="leadImageView" destination="Cah-7h-Zfo" id="zYb-3z-HB3"/>
                         <outlet property="leadName" destination="5Sx-KZ-ezz" id="Oc3-fb-e68"/>
                         <outlet property="menuButton" destination="qLr-Az-5nU" id="ZX1-TX-X5P"/>
