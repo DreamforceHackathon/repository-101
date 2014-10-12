@@ -199,27 +199,30 @@ app.get('/users', function (req, res) {
 
 app.get('/products', function (req, res) {
   var params = ['id', 'description__c', 'number_of_leads__c', 'price__c', 'company__c', 'commission_percent__c', 'name__c', 'photo_url__c' ]
-  org.query({query: 'SELECT ' + params.join(', ') + ' FROM Product2 where price__c != null', oauth: oauth}, function (err, data) {
-    if (err) return console.log(err);
+    org.authenticate({ username: S_USERNAME, password: S_PASSWORD}, function(err, _oauth) {
+        oauth = _oauth
+        org.query({query: 'SELECT ' + params.join(', ') + ' FROM Product2 where price__c != null', oauth: oauth}, function (err, data) {
+            if (err) return console.log(err);
 
 
-    result = _.map(data.records, function (record) {
-      var r = record._fields
-      return {
-        id: r.id,
-        name: r.name__c,
-        company: r.company__c,
-        description: r.description__c,
-        numberOfLeads: Number(r.number_of_leads__c),
-        price: Number(r.price__c),
-        commissionPercent: Number(r.commission_percent__c),
-        photoUrl: r.photo_url__c
-      }
+            result = _.map(data.records, function (record) {
+                var r = record._fields
+                return {
+                    id: r.id,
+                    name: r.name__c,
+                    company: r.company__c,
+                    description: r.description__c,
+                    numberOfLeads: Number(r.number_of_leads__c),
+                    price: Number(r.price__c),
+                    commissionPercent: Number(r.commission_percent__c),
+                    photoUrl: r.photo_url__c
+                }
+            })
+
+            console.log('GET /products', result);
+            res.json(result)
+        })
     })
-
-    console.log('GET /products', result);
-    res.json(result)
-  })
 })
 
 app.post('/products/:id/accept', function (req, res) {
@@ -229,26 +232,29 @@ app.post('/products/:id/accept', function (req, res) {
 
 app.get('/leads', function (req, res) {
   var params = ['id', 'name__c', 'company__c', 'industry__c', 'city__c', 'last_contacted__c', 'photo_url__c' ]
-  org.query({query: 'SELECT ' + params.join(', ') + ' FROM Lead where name__c != null', oauth: oauth}, function (err, data) {
-    if (err) return console.log(err);
+    org.authenticate({ username: S_USERNAME, password: S_PASSWORD}, function(err, _oauth) {
+        oauth = _oauth
+        org.query({query: 'SELECT ' + params.join(', ') + ' FROM Lead where name__c != null', oauth: oauth}, function (err, data) {
+            if (err) return console.log(err);
 
 
-    result = _.map(data.records, function (record) {
-      var r = record._fields
-      return {
-        id: r.id,
-        name: r.name__c,
-        company: r.company__c,
-        industry: r.industry__c,
-        city: r.city__c,
-        lastContacted: r.last_contacted__c,
-        photoUrl: r.photo_url__c
-      }
+            result = _.map(data.records, function (record) {
+                var r = record._fields
+                return {
+                    id: r.id,
+                    name: r.name__c,
+                    company: r.company__c,
+                    industry: r.industry__c,
+                    city: r.city__c,
+                    lastContacted: r.last_contacted__c,
+                    photoUrl: r.photo_url__c
+                }
+            })
+
+            console.log('GET /leads', result);
+            res.json(result)
+        })
     })
-
-    console.log('GET /leads', result);
-    res.json(result)
-  })
 })
 
 app.post('/leads/:id', function (req, res) {
