@@ -117,7 +117,7 @@
             </div>
         </li>
 
-        <li class="table-view-cell table-view-divider" ng-if="rep.pending"></li>
+        <li class="table-view-cell table-view-divider"></li>
         <li style="background-color: #5cb85c;" ng-if="rep.pending">
 
             <button class="btn-negative btn-block"
@@ -131,6 +131,16 @@
                     >
                 Accept
             </button>
+
+        </li>
+        <li style="background-color: #5cb85c;" ng-if="!rep.pending">
+
+            <button class="btn-negative btn-block"
+                    ng-click="dropRep(rep.id)"
+                    style="margin-bottom: 0; ">
+                Drop
+            </button>
+
 
         </li>
     </ul>

@@ -29,6 +29,11 @@ angular.module('callforce').controller('DetailCtrl',
 
             };
 
+            $scope.dropRep = function(repId){
+                repService.rejectRep(repId);
+                $state.go('base.active');
+            };
+
             $scope.acceptRep = function(repId){
                 repService.acceptRep(repId);
 

@@ -19,4 +19,8 @@ angular.module('callforce').controller('ActiveCtrl',
                     });
             };
 
+            $scope.dropRep = function(repId){
+
+            }
+
         }]);

@@ -43914,6 +43914,10 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
                     });
             };
 
+            $scope.dropRep = function(repId){
+
+            }
+
         }]);;angular.module('callforce').controller('DetailCtrl',
     [
         '$scope',
@@ -43943,6 +43947,11 @@ callforce.config(function ($stateProvider, $urlRouterProvider) {
                         });
                 }
 
+            };
+
+            $scope.dropRep = function(repId){
+                repService.rejectRep(repId);
+                $state.go('base.active');
             };
 
             $scope.acceptRep = function(repId){
